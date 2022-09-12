@@ -8,7 +8,7 @@
   --bolder-font: 900;
   --bg-color: #fffefe;
   --primary-color: rgb(59, 67, 88);
-  --primary-text-color:#ffffff ;
+  --primary-text-color: #ffffff;
   --secondary-color: #59e280;
   --primary-shadow: #8b8eaf;
   --secondary-shadow: #a17a69;
@@ -17,6 +17,7 @@
   --line-height: 1.7rem;
   --transition: 0.3s;
 }
+
 /* Variables end */
 
 html {
@@ -69,6 +70,7 @@ nav a {
   color: var(--primary-color);
   transition: var(--transition);
 }
+
 nav a:hover {
   color: var(--secondary-color);
   border-bottom: 2px solid var(--secondary-color);
@@ -93,8 +95,8 @@ nav ul li {
 }
 
 .hero {
-padding-top: 2in;
-padding-bottom: 1in;
+  padding-top: 2in;
+  padding-bottom: 1in;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -105,11 +107,39 @@ padding-bottom: 1in;
 
 .hero img {
   border-radius: 5%;
-  height: 10.5rem;
-  width: 10.5rem;
-  box-shadow: #8b8eaf;
+  height: 11.0rem;
+  width: 11.0rem;
+  box-shadow: slategray ;
 }
 
+
+.w3rcontainer{
+  border: 1px solid #cccfdb;
+  border-radius: 2px;
+} 
+.hover-underline-animation {
+ display: inline-block;
+ position: relative;
+ color: var(--secondary-color);
+}
+
+.hover-underline-animation:after {
+ content: '';
+ position: absolute;
+ width: 100%;
+ transform: scaleX(0);
+ height: 2px;
+ bottom: 0;
+ left: 0;
+ background-color:var(--secondary-color);
+ transform-origin: bottom right;
+ transition: transform 0.25s ease-out;
+}
+
+.hover-underline-animation:hover:after {
+ transform: scaleX(1);
+ transform-origin: bottom left;
+}
 .bio {
   width: 30rem;
   padding: 0.625rem;
@@ -137,11 +167,11 @@ padding-bottom: 1in;
 }
 
 .fa:hover {
-    opacity: 0.7;
+  opacity: 0.7;
 }
 
 .fa-facebook {
-  color:black;
+  color: black;
 }
 
 .fa-github {
@@ -150,8 +180,8 @@ padding-bottom: 1in;
 }
 
 .fa-twitter {
- 
-  color:black;
+
+  color: black;
 }
 
 .fa-linkedin {
@@ -176,11 +206,11 @@ padding-bottom: 1in;
 }
 
 .fa:hover {
-    opacity: 0.7;
+  opacity: 0.7;
 }
 
 .fa-facebook {
-  color:black;
+  color: black;
 }
 
 .fa-github {
@@ -189,8 +219,8 @@ padding-bottom: 1in;
 }
 
 .fa-twitter {
- 
-  color:black;
+
+  color: black;
 }
 
 .fa-linkedin {
