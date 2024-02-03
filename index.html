@@ -89,6 +89,11 @@
                 color: #fff !important;
             }
 
+            .navbar-brand:hover,
+            .navbar-nav .nav-link:hover {
+                color: #007bff !important;
+            }
+
             body {
                 background-color: #f8f9fa;
             }
@@ -103,12 +108,17 @@
                 color: #fff !important;
             }
 
-            
+            .navbar-brand:hover,
+            .navbar-nav .nav-link:hover {
+                color: #007bff !important;
+            }
         </style>
     </head>
     <body>
         <nav class="navbar navbar-expand-md navbar-dark bg-dark">
-            <a class="navbar-brand" href="#"></></a>
+            <a class="navbar-brand" href="#">
+                <i class="fa-duotone fa-laptop-code"></i>
+            </a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
                 <span class="navbar-toggler-icon"></span>
             </button>
@@ -148,40 +158,43 @@
                 <a href="mailto:mdabdullahih13426@gmail.com" class="btn btn-success btn-lg">Contact Me</a>
             </div>
         </div>
-        <div class="container">
-            <div class="row">
-                <div class="col-md-6">
-                    <h2>A Few Quick Facts</h2>
-                    <ul>
-                        <li>
-                            <i class="fas fa-map-marker-alt"></i> Based in Bangladesh
-                        </li>
-                        <li>
-                            <i class="fas fa-graduation-cap"></i> Learning Spring Boot, Angular.js, Software Quality Assurance
-                        </li>
-                        <li>
-                            <i class="fas fa-code"></i> Open to collaborating on Spring Boot projects
-                        </li>
-                        <li>
-                            <i class="fas fa-linux"></i> Favorite Linux distro: pop-os
-                        </li>
-                        <li>
-                            <i class="fas fa-heart"></i> Fun fact: I like Java a lot! ❤️
-                        </li>
-                    </ul>
-                </div>
-                <div class="col-md-6">
-                    <div class="hero-text">
-                        <!-- Introduction Section -->
-                        <div>
-                            <h2>Hi there! 👋</h2>
-                            <p> I'm Md. Abdullah Ibna Harun, a recent Computer Science & Engineering graduate with a strong passion for back-end development and software quality assurance. I am actively seeking for full time job opportunities where I can apply my skills, collaborate in dynamic teams, and explore new technologies. Eager to contribute, learn, and deliver impactful solutions in a challenging environment, with a solid understanding of data structures and algorithms.</p>
+        <section id="about">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-6">
+                        <h2>A Few Quick Facts</h2>
+                        <ul>
+                            <li>
+                                <i class="fas fa-map-marker-alt"></i> Based in Bangladesh
+                            </li>
+                            <li>
+                                <i class="fas fa-graduation-cap"></i> Learning Spring Boot, Angular.js, Software Quality Assurance
+                            </li>
+                            <li>
+                                <i class="fas fa-code"></i> Open to collaborating on Spring Boot projects
+                            </li>
+                            <li>
+                                <i class="fas fa-linux"></i> Favorite Linux distro: pop-os
+                            </li>
+                            <li>
+                                <i class="fas fa-heart"></i> Fun fact: I like Java a lot! ❤️
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="hero-text">
+                            <!-- Introduction Section -->
+                            <div>
+                                <h2>Hi there! 👋</h2>
+                                <p> I'm Md. Abdullah Ibna Harun, a recent Computer Science & Engineering graduate with a strong passion for back-end development and software quality assurance. I am actively seeking for full time job opportunities where I can apply my skills, collaborate in dynamic teams, and explore new technologies. Eager to contribute, learn, and deliver impactful solutions in a challenging environment, with a solid understanding of data structures and algorithms.</p>
+                            </div>
                         </div>
                     </div>
                 </div>
-            </div>
-            <hr>
-            <div class="row">
+        </section>
+        <hr>
+        <div class="row">
+            <section id="education">
                 <div class="col-md-6">
                     <h2>Education</h2>
                     <!-- B.Sc. in Computer Science & Engineering -->
@@ -209,6 +222,8 @@
                         </div>
                     </div>
                 </div>
+            </section>
+            <section id="skills">
                 <div class="col-md-6">
                     <h2>Skills</h2>
                     <!-- Programming Languages -->
@@ -266,10 +281,12 @@
                         </div>
                     </div>
                 </div>
-            </div>
-            <hr>
-            <!-- Projects and Experience Section -->
-            <div class="row">
+        </div>
+        </section>
+        <hr>
+        <!-- Projects and Experience Section -->
+        <div class="row">
+            <section id="projects">
                 <!-- Projects -->
                 <div class="col-md-6">
                     <h2>Projects</h2>
@@ -319,7 +336,9 @@
                         </div>
                     </div>
                 </div>
-                <!-- Experience -->
+            </section>
+            <!-- Experience -->
+            <section id="experience">
                 <div class="col-md-6">
                     <h2>Experience</h2>
                     <!-- Job 1 -->
@@ -381,10 +400,12 @@
                         </div>
                     </div>
                 </div>
-            </div>
-            <hr>
-            <!-- Achievements and Strengths Section -->
-            <div class="row">
+        </div>
+        </section>
+        <hr>
+        <!-- Achievements and Strengths Section -->
+        <div class="row">
+            <section id="achievements">
                 <!-- Achievements -->
                 <div class="col-md-6">
                     <h2>Achievements</h2>
@@ -409,6 +430,8 @@
                         </li>
                     </ul>
                 </div>
+            </section>
+            <section id="strengths">
                 <!-- Strengths -->
                 <div class="col-md-6">
                     <h2>Strengths</h2>
@@ -436,9 +459,11 @@
                         </li>
                     </ul>
                 </div>
-            </div>
-            <hr>
-            <!-- Find Me Online Section -->
+        </div>
+        </section>
+        <hr>
+        <!-- Find Me Online Section -->
+        <section id="contact">
             <div class="row">
                 <div class="col-md-6">
                     <h2>Find Me Online</h2>
@@ -461,7 +486,8 @@
                     </ul>
                 </div>
             </div>
-        </div>
+            </div>
+        </section>
         <!-- Footer -->
         <footer class="container-fluid bg-light text-center py-3">
             <p>© 2024 Md. Abdullah Ibna Harun. All rights reserved.</p>
