@@ -8,6 +8,7 @@
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
   <style>
     body {
       background-color: #f8f9fa;
@@ -34,17 +35,29 @@
     }
 
     .card-body p {
-      margin-bottom: 0; /* Remove default margin */
+      margin-bottom: 0;
     }
 
     .strengths ul,
-	@@ -66,39 +49,58 @@
+    .find-me-online {
+      list-style: none;
+      padding: 0;
+    }
+
+    .find-me-online a {
+      text-decoration: none;
+      color: #007bff;
+    }
+
+    .hero-text {
+      padding: 20px;
+      background-color: #f8f9fa;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     }
   </style>
 </head>
 <body>
-
-
 
 <div class="jumbotron">
   <div class="container">
@@ -59,23 +72,24 @@
     <div class="col-md-6">
       <h2>A Few Quick Facts</h2>
       <ul>
-        <li>Based in Bangladesh</li>
-        <li>Learning Spring Boot, Angular.js, Software Quality Assurance</li>
-        <li>Open to collaborating on Spring Boot projects</li>
-        <li>Favorite Linux distro: pop-os</li>
-        <li>Fun fact: I like Java a lot! ❤️</li>
+        <li><i class="fas fa-map-marker-alt"></i> Based in Bangladesh</li>
+        <li><i class="fas fa-graduation-cap"></i> Learning Spring Boot, Angular.js, Software Quality Assurance</li>
+        <li><i class="fas fa-code"></i> Open to collaborating on Spring Boot projects</li>
+        <li><i class="fas fa-linux"></i> Favorite Linux distro: pop-os</li>
+        <li><i class="fas fa-heart"></i> Fun fact: I like Java a lot! ❤️</li>
       </ul>
     </div>
     <div class="col-md-6">
       <div class="hero-text">
-      <!-- Introduction Section -->
-<div>
-    <h2>Hi there! 👋</h2>
-    <p>
-        Recent CSE graduate with a passion for Software Engineering and Quality Assurance. Experienced in Jira, JMeter, Postman, and Selenium. Proficient in Java, C/C++, Python, HTML, CSS, JavaScript, Bootstrap, Spring Boot, etc. Solid foundation in SQA methodologies, Test Plans, Cases, Bug Tracking, and troubleshooting. Eager to contribute as a Software Engineer or SQA professional. Let's connect for exciting tech discussions and growth opportunities! 🌐 #SoftwareEngineer #QualityAssurance #TechEnthusiast
-    </p>
-</div>
-
+        <!-- Introduction Section -->
+        <div>
+          <h2>Hi there! 👋</h2>
+          <p>
+            Recent CSE graduate with a passion for Software Engineering and Quality Assurance. Experienced in Jira, JMeter, Postman, and Selenium. Proficient in Java, C/C++, Python, HTML, CSS, JavaScript, Bootstrap, Spring Boot, etc. Solid foundation in SQA methodologies, Test Plans, Cases, Bug Tracking, and troubleshooting. Eager to contribute as a Software Engineer or SQA professional. Let's connect for exciting tech discussions and growth opportunities! 🌐 #SoftwareEngineer #QualityAssurance #TechEnthusiast
+          </p>
+        </div>
+      </div>
+    </div>
   </div>
 
   <hr>
@@ -85,7 +99,7 @@
       <h2>Education</h2>
       <!-- B.Sc. in Computer Science & Engineering -->
       <p>
-        <strong>B.Sc. in Computer Science & Engineering</strong><br>
+        <strong><i class="fas fa-graduation-cap"></i> B.Sc. in Computer Science & Engineering</strong><br>
         Daffodil International University, Dhaka<br>
         2019-09-02 - 2023-09-20<br>
         GPA: 3.78 / 4.0
@@ -93,7 +107,7 @@
 
       <!-- Higher Secondary Certificate, Science -->
       <p>
-        <strong>Higher Secondary Certificate, Science</strong><br>
+        <strong><i class="fas fa-graduation-cap"></i> Higher Secondary Certificate, Science</strong><br>
         Melandah Govt. College, Jamalpur<br>
         2016-04-01 - 2018-06-01<br>
         GPA: 3.42 / 5.0
@@ -101,7 +115,7 @@
 
       <!-- Secondary School Certificate, Science -->
       <p>
-        <strong>Secondary School Certificate, Science</strong><br>
+        <strong><i class="fas fa-graduation-cap"></i> Secondary School Certificate, Science</strong><br>
         Jamalpur High School, Jamalpur<br>
         2014-01-02 - 2016-03-01<br>
         GPA: 4.83 / 5.0
@@ -113,7 +127,7 @@
       <!-- Programming Languages -->
       <div class="card bg-light mb-3">
         <div class="card-body">
-          <h5 class="card-title">Programming Languages</h5>
+          <h5 class="card-title"><i class="fas fa-code"></i> Programming Languages</h5>
           <p class="card-text">Java, C/C++, Python</p>
         </div>
       </div>
@@ -121,7 +135,7 @@
       <!-- Manual Testing -->
       <div class="card bg-light mb-3">
         <div class="card-body">
-          <h5 class="card-title">Manual Testing</h5>
+          <h5 class="card-title"><i class="fas fa-vial"></i> Manual Testing</h5>
           <p class="card-text">Unit-Testing, Black box testing, White box testing, Test Execution and Evaluation, Writing and Reviewing Test Cases, Creating Test Report, Root Cause Analysis, Bug Reporting Using Test Management Tool</p>
         </div>
       </div>
@@ -129,7 +143,7 @@
       <!-- Automation Testing -->
       <div class="card bg-light mb-3">
         <div class="card-body">
-          <h5 class="card-title">Automation Testing</h5>
+          <h5 class="card-title"><i class="fas fa-robot"></i> Automation Testing</h5>
           <p class="card-text">Selenium</p>
         </div>
       </div>
@@ -137,7 +151,7 @@
       <!-- Load/Performance Testing -->
       <div class="card bg-light mb-3">
         <div class="card-body">
-          <h5 class="card-title">Load/Performance Testing</h5>
+          <h5 class="card-title"><i class="fas fa-tachometer-alt"></i> Load/Performance Testing</h5>
           <p class="card-text">JMeter</p>
         </div>
       </div>
@@ -145,7 +159,7 @@
       <!-- Web Development -->
       <div class="card bg-light mb-3">
         <div class="card-body">
-          <h5 class="card-title">Web Development</h5>
+          <h5 class="card-title"><i class="fas fa-globe"></i> Web Development</h5>
           <p class="card-text">HTML, CSS, JavaScript, Bootstrap, Spring Boot</p>
         </div>
       </div>
@@ -153,7 +167,7 @@
       <!-- Database Management -->
       <div class="card bg-light mb-3">
         <div class="card-body">
-          <h5 class="card-title">Database Management</h5>
+          <h5 class="card-title"><i class="fas fa-database"></i> Database Management</h5>
           <p class="card-text">MySQL</p>
         </div>
       </div>
@@ -164,95 +178,94 @@
   <hr>
 
   <!-- Projects and Experience Section -->
-<div class="row">
+  <div class="row">
     <!-- Projects -->
     <div class="col-md-6">
-        <h2>Projects</h2>
+      <h2>Projects</h2>
 
-        <!-- Project 1 -->
-        <div class="card">
-            <div class="card-body">
-                <h5 class="card-title">DIU_OEIS</h5>
-                <p class="card-text">
-                    Developed DIUOEIS, a club management system at Daffodil International University using HTML, CSS, Bootstrap, Python, JavaScript, Ajax, and MySQL.
-                </p>
-                <a href="https://github.com/mdabdullahibnaharun/DIU_OEIS" target="_blank" class="btn btn-primary">GitHub Repository</a>
-            </div>
+      <!-- Project 1 -->
+      <div class="card">
+        <div class="card-body">
+          <h5 class="card-title">DIU_OEIS</h5>
+          <p class="card-text">
+            Developed DIUOEIS, a club management system at Daffodil International University using HTML, CSS, Bootstrap, Python, JavaScript, Ajax, and MySQL.
+          </p>
+          <a href="https://github.com/mdabdullahibnaharun/DIU_OEIS" target="_blank" class="btn btn-primary"><i class="fab fa-github"></i> GitHub Repository</a>
         </div>
+      </div>
 
-        <!-- Project 2 -->
-        <div class="card">
-            <div class="card-body">
-                <h5 class="card-title">Employee-Management-System</h5>
-                <p class="card-text">
-                    Developed an Employee Management System using Spring Boot, Spring JDBC, Thymeleaf, and MySQL for efficient CRUD operations.
-                </p>
-                <a href="https://github.com/mdabdullahibnaharun/Employee-Management-System" target="_blank" class="btn btn-primary">GitHub Repository</a>
-            </div>
+      <!-- Project 2 -->
+      <div class="card">
+        <div class="card-body">
+          <h5 class="card-title">Employee-Management-System</h5>
+          <p class="card-text">
+            Developed an Employee Management System using Spring Boot, Spring JDBC, Thymeleaf, and MySQL for efficient CRUD operations.
+          </p>
+          <a href="https://github.com/mdabdullahibnaharun/Employee-Management-System" target="_blank" class="btn btn-primary"><i class="fab fa-github"></i> GitHub Repository</a>
         </div>
+      </div>
     </div>
 
     <!-- Experience -->
     <div class="col-md-6">
-        <h2>Experience</h2>
+      <h2>Experience</h2>
 
-        <!-- Job 1 -->
-        <div class="card">
-            <div class="card-body">
-                <h5 class="card-title">Executive Support Engineer</h5>
-                <p class="card-text">
-                    Smart Software LTD<br>
-                    2024-02-01 - Present<br>
-                    Currently working on supporting and enhancing software solutions.
-                </p>
-            </div>
+      <!-- Job 1 -->
+      <div class="card">
+        <div class="card-body">
+          <h5 class="card-title">Executive Support Engineer</h5>
+          <p class="card-text">
+            Smart Software LTD<br>
+            2024-02-01 - Present<br>
+            Currently working on supporting and enhancing software solutions.
+          </p>
         </div>
+      </div>
 
-        <!-- Job 2 -->
-        <div class="card">
-            <div class="card-body">
-                <h5 class="card-title">Software Quality Assurance Engineer Intern</h5>
-                <p class="card-text">
-                    Creative Soft Technology LTD.<br>
-                    2023-09-03 - 2023-12-28<br>
-                    Internship involved manual and automated testing, collaborating with cross-functional teams, and participating in code reviews.
-                </p>
-            </div>
+      <!-- Job 2 -->
+      <div class="card">
+        <div class="card-body">
+          <h5 class="card-title">Software Quality Assurance Engineer Intern</h5>
+          <p class="card-text">
+            Creative Soft Technology LTD.<br>
+            2023-09-03 - 2023-12-28<br>
+            Internship involved manual and automated testing, collaborating with cross-functional teams, and participating in code reviews.
+          </p>
         </div>
+      </div>
     </div>
-</div>
+  </div>
 
-<hr>
+  <hr>
 
-<!-- Achievements and Strengths Section -->
-<div class="row">
+  <!-- Achievements and Strengths Section -->
+  <div class="row">
     <!-- Achievements -->
     <div class="col-md-6">
-        <h2>Achievements</h2>
-        <ul>
-            <li>Completed Software Testing and Quality Assurance (SQA) Training. From Skill.jobs 14th Batch. (October 8, 2023)</li>
-            <li>Completed Java From Basic To Professional Training. From virtual.pondit.com 3rd Batch. (November 22, 2021)</li>
-            <li>250+ problems solved in various online judges like, CodeForces, Hackerrank, URI, UVa, toph, VJudge, CodeMarshal, LeetCode, LightOj, etc.</li>
-            <li>Participated Preliminary Round of ICPC Dhaka Regional 2020</li>
-            <li>Participated in Take Off Programming Contest, fall’19 & Spring’20</li>
-            <li>Participated International Joint Conference on Advances in Computational Intelligence (IJCACI 2020). Technical Session 2 & 6: Artificial Intelligence and machine learning & Network and information security.</li>
-        </ul>
+      <h2>Achievements</h2>
+      <ul>
+        <li><i class="fas fa-medal"></i> Completed Software Testing and Quality Assurance (SQA) Training. From Skill.jobs 14th Batch. (October 8, 2023)</li>
+        <li><i class="fas fa-medal"></i> Completed Java From Basic To Professional Training. From virtual.pondit.com 3rd Batch. (November 22, 2021)</li>
+        <li><i class="fas fa-code"></i> 250+ problems solved in various online judges like, CodeForces, Hackerrank, URI, UVa, toph, VJudge, CodeMarshal, LeetCode, LightOj, etc.</li>
+        <li><i class="fas fa-trophy"></i> Participated Preliminary Round of ICPC Dhaka Regional 2020</li>
+        <li><i class="fas fa-trophy"></i> Participated in Take Off Programming Contest, fall’19 & Spring’20</li>
+        <li><i class="fas fa-trophy"></i> Participated International Joint Conference on Advances in Computational Intelligence (IJCACI 2020). Technical Session 2 & 6: Artificial Intelligence and machine learning & Network and information security.</li>
+      </ul>
     </div>
 
     <!-- Strengths -->
     <div class="col-md-6">
-        <h2>Strengths</h2>
-        <ul class="strengths">
-            <li>Problem Solving</li>
-            <li>Time Management</li>
-            <li>Teamwork</li>
-            <li>Communication</li>
-            <li>Logical Thinking</li>
-            <li>Leadership</li>
-        </ul>
+      <h2>Strengths</h2>
+      <ul class="strengths">
+        <li><i class="fas fa-lightbulb"></i> Problem Solving</li>
+        <li><i class="fas fa-clock"></i> Time Management</li>
+        <li><i class="fas fa-users"></i> Teamwork</li>
+        <li><i class="fas fa-comments"></i> Communication</li>
+        <li><i class="fas fa-brain"></i> Logical Thinking</li>
+        <li><i class="fas fa-user-tie"></i> Leadership</li>
+      </ul>
     </div>
-</div>
-
+  </div>
 
   <hr>
 
@@ -260,9 +273,9 @@
     <div class="col-md-6">
       <h2>Find Me Online</h2>
       <ul class="find-me-online">
-        <li><a href="https://github.com/mdabdullahibnaharun" target="_blank">GitHub</a></li>
-        <li><a href="https://www.linkedin.com/in/mdabdullahibnaharun/" target="_blank">LinkedIn</a></li>
-        <li><a href="https://twitter.com/mdabdullahih" target="_blank">Twitter</a></li>
+        <li><i class="fab fa-github"></i> <a href="https://github.com/mdabdullahibnaharun" target="_blank">GitHub</a></li>
+        <li><i class="fab fa-linkedin"></i> <a href="https://www.linkedin.com/in/mdabdullahibnaharun/" target="_blank">LinkedIn</a></li>
+        <li><i class="fab fa-twitter"></i> <a href="https://twitter.com/mdabdullahih" target="_blank">Twitter</a></li>
       </ul>
     </div>
   </div>
