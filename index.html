@@ -1,347 +1,284 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Md. Abdullah Ibna Harun - Portfolio</title>
-    <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
-        integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8sh+WyCYBb5gNIpBS9cFfZKa4Gg5lJbME5iW1F" crossorigin="anonymous">
-    <!-- Font Awesome Icons -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css"
-        integrity="sha384-kw9e29l2a8Tz6BYCA4A9otcsOJb4W28ev6vYZZfqc7IjTyYTWmo2LauE5lH6FUZJ" crossorigin="anonymous">
-    <!-- Custom Styles -->
-    <style>
-        body {
-            background-color: #f8f9fa;
-            color: #333;
-        }
+  <title>Md. Abdullah Ibna Harun - Portfolio</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  <style>
+    body {
+      background-color: #f8f9fa;
+    }
 
-        .hero {
-            background-color: #343a40;
-            color: #fff;
-            padding: 80px 0;
-            text-align: center;
-        }
+    .jumbotron {
+      background-color: #343a40;
+      color: #fff;
+      padding: 80px 0;
+      text-align: center;
+    }
 
-        .hero h1, .hero p {
-            margin-bottom: 20px;
-        }
+    .jumbotron h1 {
+      font-size: 3em;
+    }
 
-        .quick-facts ul {
-            list-style: none;
-            padding: 0;
-        }
+    .container {
+      margin-top: 50px;
+      margin-bottom: 50px;
+    }
 
-        .quick-facts li {
-            margin-bottom: 10px;
-        }
+    .card {
+      margin-bottom: 20px;
+    }
 
-        .summary-contact p {
-            margin-bottom: 0;
-        }
+    .card-body p {
+      margin-bottom: 0; /* Remove default margin */
+    }
 
-        .section-title {
-            color: #007bff;
-            margin-top: 50px;
-            margin-bottom: 30px;
-        }
-
-        .skill-card {
-            margin-bottom: 20px;
-        }
-
-        .project-card {
-            margin-bottom: 30px;
-        }
-
-        .experience-card {
-            margin-bottom: 30px;
-        }
-
-        .achievement-card {
-            margin-bottom: 30px;
-        }
-
-        .strengths ul {
-            list-style: none;
-            padding: 0;
-        }
-
-        .strengths li {
-            margin-bottom: 10px;
-        }
-
-        .find-me-online ul {
-            list-style: none;
-            padding: 0;
-        }
-
-        .find-me-online li {
-            margin-bottom: 10px;
-        }
-    </style>
+    .strengths ul,
+	@@ -66,39 +49,58 @@
+    }
+  </style>
 </head>
 <body>
 
-<!-- Hero Section -->
-<div class="hero">
-    <div class="container text-center">
-        <h1 class="display-4">Md. Abdullah Ibna Harun</h1>
-        <p class="lead">Tech Enthusiast | Software Engineer | Quality Assurance Engineer</p>
-        <div class="my-4">
-            <a href="https://mdabdullahibnaharun.github.io/" target="_blank" class="btn btn-primary mr-2">Portfolio</a>
-            <a href="mailto:mdabdullahih13426@gmail.com" class="btn btn-success">Contact Me</a>
-        </div>
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+  <div class="container">
+    <a class="navbar-brand" href="#">Home</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+     
     </div>
+  </div>
+</nav>
+
+<div class="jumbotron">
+  <div class="container">
+    <h1 class="display-4">Md. Abdullah Ibna Harun</h1>
+    <p class="lead">Tech Enthusiast | Software Engineer | Quality Assurance Engineer</p>
+    <a href="https://mdabdullahibnaharun.github.io/" target="_blank" class="btn btn-primary btn-lg">Portfolio</a>
+    <a href="mailto:mdabdullahih13426@gmail.com" class="btn btn-success btn-lg">Contact Me</a>
+  </div>
 </div>
 
-<!-- Quick Facts Section -->
-<div class="container quick-facts">
-    <div class="row">
-        <div class="col-md-6">
-            <h2 class="section-title">A Few Quick Facts</h2>
-            <ul>
-                <li>Based in Bangladesh</li>
-                <li>Learning Spring Boot, Angular.js, Software Quality Assurance</li>
-                <li>Open to collaborating on Spring Boot projects</li>
-                <li>Favorite Linux distro: pop-os</li>
-                <li>Fun fact: I like Java a lot! ❤️</li>
-            </ul>
+<div class="container">
+  <div class="row">
+    <div class="col-md-6">
+      <h2>A Few Quick Facts</h2>
+      <ul>
+        <li>Based in Bangladesh</li>
+        <li>Learning Spring Boot, Angular.js, Software Quality Assurance</li>
+        <li>Open to collaborating on Spring Boot projects</li>
+        <li>Favorite Linux distro: pop-os</li>
+        <li>Fun fact: I like Java a lot! ❤️</li>
+      </ul>
+    </div>
+    <div class="col-md-6">
+      <div class="hero-text">
+        <h2>Summary and Contact Details</h2>
+        <p>I am a Computer Science & Engineering graduate with a passion for Software Engineering and Quality Assurance Engineering.</p>
+    </div>
+  </div>
+
+  <hr>
+
+  <div class="row">
+    <div class="col-md-6">
+      <h2>Education</h2>
+      <!-- B.Sc. in Computer Science & Engineering -->
+      <p>
+        <strong>B.Sc. in Computer Science & Engineering</strong><br>
+        Daffodil International University, Dhaka<br>
+        2019-09-02 - 2023-09-20<br>
+        GPA: 3.78 / 4.0
+      </p>
+
+      <!-- Higher Secondary Certificate, Science -->
+      <p>
+        <strong>Higher Secondary Certificate, Science</strong><br>
+        Melandah Govt. College, Jamalpur<br>
+        2016-04-01 - 2018-06-01<br>
+        GPA: 3.42 / 5.0
+      </p>
+
+      <!-- Secondary School Certificate, Science -->
+      <p>
+        <strong>Secondary School Certificate, Science</strong><br>
+        Jamalpur High School, Jamalpur<br>
+        2014-01-02 - 2016-03-01<br>
+        GPA: 4.83 / 5.0
+      </p>
+    </div>
+
+    <div class="col-md-6">
+      <h2>Skills</h2>
+      <!-- Programming Languages -->
+      <div class="card bg-light mb-3">
+        <div class="card-body">
+          <h5 class="card-title">Programming Languages</h5>
+          <p class="card-text">Java, C/C++, Python</p>
         </div>
-        <div class="col-md-6">
-            <h2 class="section-title">Summary and Contact Details</h2>
-            <div class="summary-contact">
-                <p>I am a Computer Science & Engineering graduate with a passion for Software Engineering and Quality Assurance Engineering.</p>
-                <p><strong>Contact:</strong> +8801786287766</p>
-                <p><strong>Email:</strong> mdabdullahih13426@gmail.com</p>
-                <p><strong>Portfolio:</strong> <a href="mdabdullahibnaharun.github.io">mdabdullahibnaharun.github.io</a></p>
-                <p><strong>Location:</strong> Azimpur, Dhaka-1211, Bangladesh</p>
+      </div>
+
+      <!-- Manual Testing -->
+      <div class="card bg-light mb-3">
+        <div class="card-body">
+          <h5 class="card-title">Manual Testing</h5>
+          <p class="card-text">Unit-Testing, Black box testing, White box testing, Test Execution and Evaluation, Writing and Reviewing Test Cases, Creating Test Report, Root Cause Analysis, Bug Reporting Using Test Management Tool</p>
+        </div>
+      </div>
+
+      <!-- Automation Testing -->
+      <div class="card bg-light mb-3">
+        <div class="card-body">
+          <h5 class="card-title">Automation Testing</h5>
+          <p class="card-text">Selenium</p>
+        </div>
+      </div>
+
+      <!-- Load/Performance Testing -->
+      <div class="card bg-light mb-3">
+        <div class="card-body">
+          <h5 class="card-title">Load/Performance Testing</h5>
+          <p class="card-text">JMeter</p>
+        </div>
+      </div>
+
+      <!-- Web Development -->
+      <div class="card bg-light mb-3">
+        <div class="card-body">
+          <h5 class="card-title">Web Development</h5>
+          <p class="card-text">HTML, CSS, JavaScript, Bootstrap, Spring Boot</p>
+        </div>
+      </div>
+
+      <!-- Database Management -->
+      <div class="card bg-light mb-3">
+        <div class="card-body">
+          <h5 class="card-title">Database Management</h5>
+          <p class="card-text">MySQL</p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <hr>
+
+  <!-- Projects and Experience Section -->
+<div class="row">
+    <!-- Projects -->
+    <div class="col-md-6">
+        <h2>Projects</h2>
+
+        <!-- Project 1 -->
+        <div class="card">
+            <div class="card-body">
+                <h5 class="card-title">DIU_OEIS</h5>
+                <p class="card-text">
+                    Developed DIUOEIS, a club management system at Daffodil International University using HTML, CSS, Bootstrap, Python, JavaScript, Ajax, and MySQL.
+                </p>
+                <a href="https://github.com/mdabdullahibnaharun/DIU_OEIS" target="_blank" class="btn btn-primary">GitHub Repository</a>
+            </div>
+        </div>
+
+        <!-- Project 2 -->
+        <div class="card">
+            <div class="card-body">
+                <h5 class="card-title">Employee-Management-System</h5>
+                <p class="card-text">
+                    Developed an Employee Management System using Spring Boot, Spring JDBC, Thymeleaf, and MySQL for efficient CRUD operations.
+                </p>
+                <a href="https://github.com/mdabdullahibnaharun/Employee-Management-System" target="_blank" class="btn btn-primary">GitHub Repository</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Experience -->
+    <div class="col-md-6">
+        <h2>Experience</h2>
+
+        <!-- Job 1 -->
+        <div class="card">
+            <div class="card-body">
+                <h5 class="card-title">Executive Support Engineer</h5>
+                <p class="card-text">
+                    Smart Software LTD<br>
+                    2024-02-01 - Present<br>
+                    Currently working on supporting and enhancing software solutions.
+                </p>
+            </div>
+        </div>
+
+        <!-- Job 2 -->
+        <div class="card">
+            <div class="card-body">
+                <h5 class="card-title">Software Quality Assurance Engineer Intern</h5>
+                <p class="card-text">
+                    Creative Soft Technology LTD.<br>
+                    2023-09-03 - 2023-12-28<br>
+                    Internship involved manual and automated testing, collaborating with cross-functional teams, and participating in code reviews.
+                </p>
             </div>
         </div>
     </div>
 </div>
 
-<!-- Education Section -->
-<div class="container">
-    <h2 class="section-title">Education</h2>
-    <!-- B.Sc. in Computer Science & Engineering -->
-    <p>
-        <strong>B.Sc. in Computer Science & Engineering</strong><br>
-        Daffodil International University, Dhaka<br>
-        2019-09-02 - 2023-09-20<br>
-        GPA: 3.78 / 4.0
-    </p>
-    <!-- Higher Secondary Certificate, Science -->
-    <p>
-        <strong>Higher Secondary Certificate, Science</strong><br>
-        Melandah Govt. College, Jamalpur<br>
-        2016-04-01 - 2018-06-01<br>
-        GPA: 3.42 / 5.0
-    </p>
-    <!-- Secondary School Certificate, Science -->
-    <p>
-        <strong>Secondary School Certificate, Science</strong><br>
-        Jamalpur High School, Jamalpur<br>
-        2014-01-02 - 2016-03-01<br>
-        GPA: 4.83 / 5.0
-    </p>
+<hr>
+
+<!-- Achievements and Strengths Section -->
+<div class="row">
+    <!-- Achievements -->
+    <div class="col-md-6">
+        <h2>Achievements</h2>
+        <ul>
+            <li>Completed Software Testing and Quality Assurance (SQA) Training. From Skill.jobs 14th Batch. (October 8, 2023)</li>
+            <li>Completed Java From Basic To Professional Training. From virtual.pondit.com 3rd Batch. (November 22, 2021)</li>
+            <li>250+ problems solved in various online judges like, CodeForces, Hackerrank, URI, UVa, toph, VJudge, CodeMarshal, LeetCode, LightOj, etc.</li>
+            <li>Participated Preliminary Round of ICPC Dhaka Regional 2020</li>
+            <li>Participated in Take Off Programming Contest, fall’19 & Spring’20</li>
+            <li>Participated International Joint Conference on Advances in Computational Intelligence (IJCACI 2020). Technical Session 2 & 6: Artificial Intelligence and machine learning & Network and information security.</li>
+        </ul>
+    </div>
+
+    <!-- Strengths -->
+    <div class="col-md-6">
+        <h2>Strengths</h2>
+        <ul class="strengths">
+            <li>Problem Solving</li>
+            <li>Time Management</li>
+            <li>Teamwork</li>
+            <li>Communication</li>
+            <li>Logical Thinking</li>
+            <li>Leadership</li>
+        </ul>
+    </div>
 </div>
 
-<!-- Skills Section -->
-<div class="container">
-    <h2 class="section-title">Skills</h2>
-    <!-- Programming Languages -->
-    <div class="card skill-card">
-        <div class="card-body">
-            <h5 class="card-title">Programming Languages</h5>
-            <p class="card-text">Java, C/C++, Python</p>
-        </div>
-    </div>
 
-    <!-- Manual Testing -->
-    <div class="card skill-card">
-        <div class="card-body">
-            <h5 class="card-title">Manual Testing</h5>
-            <p class="card-text">Unit-Testing, Black box testing, White box testing, Test Execution and Evaluation, Writing and Reviewing Test Cases, Creating Test Report, Root Cause Analysis, Bug Reporting Using Test Management Tool</p>
-        </div>
-    </div>
+  <hr>
 
-    <!-- Automation Testing -->
-    <div class="card skill-card">
-        <div class="card-body">
-            <h5 class="card-title">Automation Testing</h5>
-            <p class="card-text">Selenium</p>
-        </div>
+  <div class="row">
+    <div class="col-md-6">
+      <h2>Find Me Online</h2>
+      <ul class="find-me-online">
+        <li><a href="https://github.com/mdabdullahibnaharun" target="_blank">GitHub</a></li>
+        <li><a href="https://www.linkedin.com/in/mdabdullahibnaharun/" target="_blank">LinkedIn</a></li>
+        <li><a href="https://twitter.com/mdabdullahih" target="_blank">Twitter</a></li>
+      </ul>
     </div>
-
-    <!-- Load/Performance Testing -->
-    <div class="card skill-card">
-        <div class="card-body">
-            <h5 class="card-title">Load/Performance Testing</h5>
-            <p class="card-text">Jmeter</p>
-        </div>
-    </div>
-
-    <!-- ... (add more skills as needed) ... -->
+  </div>
 
 </div>
 
-<!-- Projects Section -->
-<div class="container">
-    <h2 class="section-title">Projects</h2>
-    <!-- DIU_OEIS -->
-    <div class="card project-card">
-        <div class="card-body">
-            <h5 class="card-title">DIU_OEIS</h5>
-            <p class="card-text">DIUOEIS, developed with HTML, CSS, Bootstrap, Python, JavaScript, Ajax, and MySQL, simplifies club management, news, notices, and event coordination at Daffodil International University.</p>
-            <a href="https://github.com/mdabdullahibnaharun/DIU_OEIS" target="_blank" class="btn btn-primary">GitHub Repository</a>
-        </div>
-    </div>
+<!-- Footer -->
+<footer class="container-fluid bg-light text-center py-3">
+  <p>© 2024 Md. Abdullah Ibna Harun. All rights reserved.</p>
+</footer>
 
-    <!-- Employee-Management-System -->
-    <div class="card project-card">
-        <div class="card-body">
-            <h5 class="card-title">Employee-Management-System</h5>
-            <p class="card-text">Employee Management System CRUD project using Spring Boot, Spring JDBC, Thymeleaf, and MySQL database.</p>
-            <a href="https://github.com/mdabdullahibnaharun/Employee-Management-System" target="_blank" class="btn btn-primary">GitHub Repository</a>
-        </div>
-    </div>
-
-    <!-- DIU-Assist -->
-    <div class="card project-card">
-        <div class="card-body">
-            <h5 class="card-title">DIU-Assist</h5>
-            <p class="card-text">A software facilitating social and academic links for CSE students with user login, a dedicated browser, and MySQL database using Java technologies.</p>
-            <a href="https://github.com/mdabdullahibnaharun/DIU-Assist" target="_blank" class="btn btn-primary">GitHub Repository</a>
-        </div>
-    </div>
-
-    <!-- BlogApp -->
-    <div class="card project-card">
-        <div class="card-body">
-            <h5 class="card-title">BlogApp</h5>
-            <p class="card-text">Developed a Flutter-based Basic Blog app for easy CRUD operations, user authentication, and Firebase storage, ensuring a lightweight and user-friendly experience.</p>
-            <a href="https://github.com/mdabdullahibnaharun/BlogApp" target="_blank" class="btn btn-primary">GitHub Repository</a>
-        </div>
-    </div>
-
-    <!-- konnect-AutomationTesting-Selenium -->
-    <div class="card project-card">
-        <div class="card-body">
-            <h5 class="card-title">konnect-AutomationTesting-Selenium</h5>
-            <p class="card-text">This is a Java-based Selenium automation script using the TestNG framework for testing the Demo Site.</p>
-            <a href="https://github.com/mdabdullahibnaharun/konnect-AutomationTesting-Selenium" target="_blank" class="btn btn-primary">GitHub Repository</a>
-        </div>
-    </div>
-
-    <!-- ... (add more projects as needed) ... -->
-
-</div>
-
-<!-- Experience Section -->
-<div class="container">
-    <h2 class="section-title">Experience</h2>
-    <!-- Executive Support Engineer -->
-    <div class="card experience-card">
-        <div class="card-body">
-            <h5 class="card-title">Executive Support Engineer</h5>
-            <p class="card-text">Smart Software LTD<br>2024-02-01 - Present</p>
-        </div>
-    </div>
-    <!-- Software Quality Assurance Engineer Intern -->
-    <div class="card experience-card">
-        <div class="card-body">
-            <h5 class="card-title">Software Quality Assurance Engineer Intern</h5>
-            <p class="card-text">Creative Soft Technology LTD.<br>2023-09-03 - 2023-12-28</p>
-        </div>
-    </div>
-    <!-- Joint Secretary & Campus Ambassador Director -->
-    <div class="card experience-card">
-        <div class="card-body">
-            <h5 class="card-title">Joint Secretary & Campus Ambassador Director</h5>
-            <p class="card-text">Show the Creativity<br>2020-01-01 - 2021-07-01</p>
-        </div>
-    </div>
-    <!-- Student Prefect -->
-    <div class="card experience-card">
-        <div class="card-body">
-            <h5 class="card-title">Student Prefect</h5>
-            <p class="card-text">Daffodil International University<br>2020-11-03 - 2021-05-03</p>
-        </div>
-    </div>
-    <!-- ... (add more experiences as needed) ... -->
-</div>
-
-<!-- Achievements Section -->
-<div class="container">
-    <h2 class="section-title">Achievements</h2>
-    <!-- Software Testing and Quality Assurance (SQA) Training -->
-    <p class="achievement-card">
-        <strong>Completed Software Testing and Quality Assurance (SQA) Training</strong><br>
-        From Skill.jobs 14th Batch. (October 8, 2023)
-    </p>
-    <!-- Java From Basic To Professional Training -->
-    <p class="achievement-card">
-        <strong>Completed Java From Basic To Professional Training</strong><br>
-        From virtual.pondit.com 3rd Batch. (November 22, 2021)
-    </p>
-    <!-- Problems Solved in Online Judges -->
-    <p class="achievement-card">
-        <strong>250+ problems solved in various online judges</strong><br>
-        Like CodeForces, Hackerrank, URI, UVa, toph, VJudge, CodeMarshal, LeetCode, LightOj, etc.
-    </p>
-    <!-- ICPC Dhaka Regional 2020 -->
-    <p class="achievement-card">
-        <strong>Participated Preliminary Round of ICPC Dhaka Regional 2020</strong>
-    </p>
-    <!-- Take Off Programming Contest -->
-    <p class="achievement-card">
-        <strong>Participated in Take Off Programming Contest, fall’19 & Spring’20</strong>
-    </p>
-    <!-- International Joint Conference on Advances in Computational Intelligence (IJCACI 2020) -->
-    <p class="achievement-card">
-        <strong>Participated International Joint Conference on Advances in Computational Intelligence (IJCACI 2020)</strong><br>
-        Technical Session 2 & 6: Artificial Intelligence and machine learning & Network and information security.
-    </p>
-    <!-- ... (add more achievements as needed) ... -->
-</div>
-
-<!-- Strengths Section -->
-<div class="container">
-    <h2 class="section-title">Strengths</h2>
-    <ul class="strengths">
-        <li>Problem Solving</li>
-        <li>Time Management</li>
-        <li>Teamwork</li>
-        <li>Communication</li>
-        <li>Logical Thinking</li>
-        <li>Leadership</li>
-    </ul>
-</div>
-
-<!-- Find Me Online Section -->
-<div class="container">
-    <h2 class="section-title">Find Me Online</h2>
-    <ul class="find-me-online">
-        <li><strong>Linkedin:</strong> <a href="https://linkedin.com/in/mdabdullahibnaharun">mdabdullahibnaharun</a></li>
-        <li><strong>Twitter:</strong> <a href="https://twitter.com/mdabdullahih">mdabdullahih</a></li>
-        <li><strong>Github:</strong> <a href="https://github.com/mdabdullahibnaharun">mdabdullahibnaharun</a></li>
-        <li><strong>Facebook:</strong> <a href="https://facebook.com/mdabdullahibnaharun">mdabdullahibnaharun</a></li>
-    </ul>
-</div>
-
-<!-- Bootstrap JS and Popper.js -->
-<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
-    integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
-    crossorigin="anonymous"></script>
-<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"
-    integrity="sha384-g6bC5CjJmqWjc11PB4dcXjA2zRYIn1m3qD3E1Ag8SzoA8hIshp5/DDE3mQ6j1HgG"
-    crossorigin="anonymous"></script>
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"
-    integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8sh+WyCYBb5gNIpBS9cFfZKa4Gg5lJbME5iW1F"
-    crossorigin="anonymous"></script>
-<!-- Font Awesome Icons -->
-<script src="https://kit.fontawesome.com/your-font-awesome-kit.js" crossorigin="anonymous"></script>
 </body>
 </html>
