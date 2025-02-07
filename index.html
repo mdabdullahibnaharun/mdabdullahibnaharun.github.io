@@ -1,130 +1,365 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Md. Abdullah Ibna Harun - Portfolio</title>
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-    <link rel="stylesheet" href="styles.css">
     <style>
+        /* Inter Font from Google Fonts */
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
+
+        /* VARIABLES */
+        :root {
+            --accent-color: #47ebeb;
+            --background-color: #2a2a31;
+            --text-color: #fff;
+            --text-color-muted: #b9b9b9;
+
+            /* spacing */
+            --space-xs: 4px;
+            --space-sm: 8px;
+            --space-md: 16px;
+            --space-lg: 32px;
+            --space-xl: 64px;
+            --space-xxl: 128px;
+
+            /* typography */
+            --font-size-xs: 14px;
+            --font-size-sm: 16px;
+            --font-size-md: 18px;
+            --font-size-lg: 24px;
+            --font-size-xl: 28px;
+            --font-size-xxl: 88px;
+        }
+
         body {
-    background-color: #f8f9fa;
-    color: #343a40;
-}
+            background-color: var(--background-color);
+            font-family: Inter, Arial, sans-serif;
+            margin: 0;
+            padding: 0 20px;
+            color: var(--text-color);
+        }
 
-h1 {
-    font-size: 2.5rem;
-    margin-bottom: 0.5rem;
-}
+        #page {
+            display: flex;
+            flex-direction: column;
+            max-width: 1000px;
+            margin: 0 auto;
+            padding-top: var(--space-md);
+        }
 
-h2 {
-    font-size: 2rem;
-    margin-top: 1.5rem;
-    margin-bottom: 1rem;
-}
+        /* LOGO AND NAVIGATION */
 
-ul {
-    list-style-type: none;
-    padding: 0;
-}
+        header {
+            display: flex;
+            align-items: center;
+            padding: 20px 0;
+        }
 
-.list-group-item {
-    background-color: #ffffff;
-    border: 1px solid #dee2e6;
-}
+        nav {
+            margin-left: auto;
+        }
 
-footer {
-    font-size: 0.9rem;
-}
+        .logo {
+            font-size: var(--font-size-lg);
+            font-weight: 700;
+        }
+
+        nav ul {
+            display: flex;
+            gap: 40px;
+            list-style: none;
+            margin: 0;
+        }
+
+        nav ul li a:link,
+        nav ul li a:visited {
+            color: var(--text-color);
+            opacity: 0.7;
+        }
+
+        /* TYPOGRAPHY */
+
+        a:link,
+        a:visited {
+            color: var(--accent-color);
+            text-decoration: none;
+        }
+
+        h1 {
+            font-size: var(--font-size-xxl);
+            margin-bottom: var(--space-sm);
+        }
+
+        h2 {
+            font-size: var(--font-size-xl);
+            color: var(--accent-color);
+            margin-bottom: var(--space-lg);
+            font-weight: 200;
+            margin-top: var(--space-xl);
+        }
+
+        h3 {
+            font-size: var(--font-size-lg);
+            margin-bottom: var(--space-sm);
+            font-weight: 400;
+        }
+
+        p {
+            font-size: var(--font-size-sm);
+            font-weight: 400;
+            line-height: 1.6;
+            color: var(--text-color-muted);
+            margin-bottom: var(--space-md);
+        }
+
+        /* SECTIONS  */
+
+        #about {
+            margin-top: var(--space-xxl);
+        }
+
+        #about h1 {
+            font-size: var(--font-size-xxl);
+            margin-bottom: var(--space-sm);
+        }
+
+        #about p {
+            font-size: var(--font-size-xl);
+            font-weight: 200;
+            line-height: 1.4;
+            color: var(--text-color);
+        }
+
+        section {
+            margin-top: var(--space-xxl);
+            margin-bottom: var(--space-xxl);
+        }
+
+        .card {
+            background: linear-gradient(90deg, #35353f 0%, #3d3b3e 50%, #3d3b3e 50%);
+            border-radius: 20px;
+            padding: var(--space-xs) var(--space-lg) var(--space-lg);
+            border: 0.5px solid #484851;
+            margin-bottom: var(--space-lg);
+        }
+
+        .card p {
+            margin: var(--space-xs) 0;
+            font-size: var(--font-size-xs);
+        }
+
+        /* CONTACT  */
+
+        #contact {
+            text-align: center;
+        }
+
+        #contact p {
+            font-size: var(--font-size-lg);
+            font-weight: 200;
+            line-height: 1.4;
+            color: var(--text-color);
+        }
+
+        /* FOOTER */
+
+        footer {
+            margin-top: var(--space-xl);
+            padding: 0 0 var(-- space-lg);
+            color: var(--text-color-muted);
+            text-align: center;
+        }
+
+        footer .social {
+            display: flex;
+            gap: var(--space-lg);
+            margin-bottom: var(--space-lg);
+            justify-content: center;
+            align-items: center;
+        }
+
+        footer .social a:hover svg {
+            fill: var(--accent-color);
+        }
     </style>
 </head>
+
 <body>
-    <div class="container">
-        <header class="text-center my-5">
-            <h1>Md. Abdullah Ibna Harun</h1>
-            <p class="lead">Aspiring Software Engineer | ☕ Java | Spring Boot | Angular | Microservices | SQA | Open to Work</p>
+    <div id="page">
+
+        <header>
+            <div class="logo">
+                <a href="/">Md. Abdullah Ibna Harun</a>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="#experience">Experience</a></li>
+                    <li><a href="#portfolio">Recent Work</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
         </header>
 
-        <section id="contact" class="mb-5">
-            <h2>Contact</h2>
-            <ul class="list-unstyled">
-                <li>📞 +8801786287766 (Mobile)</li>
-                <li>📧 <a href="mailto:abdullah13426.cse@gmail.com">abdullah13426.cse@gmail.com</a></li>
-                <li>🔗 <a href="https://www.linkedin.com/in/mdabdullahibnaharun" target="_blank">LinkedIn</a></li>
-                <li>🌐 <a href="https://mdabdullahibnaharun.github.io/" target="_blank">Portfolio</a></li>
-            </ul>
-        </section>
+        <main>
+            <div id="about">
+                <h1>
+                    Hi, I'm Md. Abdullah Ibna Harun.
+                </h1>
+                <p>
+                    Aspiring Software Engineer with a passion for building scalable software solutions. Proficient in Java, Spring Boot, Angular, and Microservices. Currently open to work opportunities.
+                </p>
+            </div>
 
-        <section id="skills" class="mb-5">
-            <h2>Top Skills</h2>
-            <ul class="list-group">
-                <li class="list-group-item">Software Project Management</li>
-                <li class="list-group-item">Event Management</li>
-                <li class="list-group-item">Spring Framework</li>
-            </ul>
-        </section>
+            <section id="skills">
+                <h2>Skills</h2>
+                <div class="skill card">
+                    <h3>
+                        Software Development
+                    </h3>
+                    <p>
+                        &bull; Proficient in Java, Spring Framework, and Angular.
+                        <br>
+                        &bull; Experience in building RESTful APIs and microservices.
+                    </p>
+                </div>
 
-        <section id="languages" class="mb-5">
-            <h2>Languages</h2>
-            <ul class="list-group">
-                <li class="list-group-item">Bangla (Native)</li>
-                <li class="list-group-item">English (Limited Working)</li>
-                <li class="list-group-item">Hindi (Elementary)</li>
-            </ul>
-        </section>
+                <div class="skill card">
+                    <h3>
+                        Software Quality Assurance
+                    </h3>
+                    <p>
+                        &bull; Expertise in manual and automated testing.
+                        <br>
+                        &bull; Familiar with testing tools and methodologies.
+                    </p>
+                </div>
 
-        <section id="certifications" class="mb-5">
-            <h2>Certifications</h2>
-            <ul class="list-group">
-                <li class="list-group-item">Java From Basic To Professional</li>
-                <li class="list-group-item">CyberSAFE</li>
-                <li class="list-group-item">C Programming</li>
-                <li class="list-group-item">Software Testing and Quality Assurance (SQA)</li>
-            </ul>
-        </section>
+                <div class="skill card">
+                    <h3>
+                        Project Management
+                    </h3>
+                    <p>
+                        &bull; Experience in managing software projects and teams.
+                        <br>
+                        &bull; Strong organizational and communication skills.
+                    </p>
+                </div>
+            </section>
 
-        <section id="summary" class="mb-5">
-            <h2>Summary</h2>
-            <p>Passionate about building scalable software solutions with expertise in manual/automated testing, Java, Spring Boot, and microservices architecture. Ready to contribute as a Software Engineer or SQA Engineer to deliver high-quality software.</p>
-        </section>
+            <section id="experience">
+                <h2>Experience</h2>
+                <div class="job card">
+                    <h3>Smart Software Ltd.</h3>
+                    <p class="role">Software Quality Assurance Engineer</p>
+                    <p class="timeline">May 2024 - February 2025</p>
+                    <p class="responsibilities">
+                        Executed manual & automated tests for functionality, UI, load, and performance. Tracked and reported bugs using Bitrix24. Led teams, managed timelines, and ensured on-time project delivery.
+                    </p>
+                </div>
+                <div class="job card">
+                    <h3>Technical Support Executive</h3>
+                    <p class="timeline">February 2024 - May 2024</p>
+                    <p class="responsibilities">
+                        Provided technical support to customers, resolving issues and answering inquiries. Conducted requirements analysis to understand and address customer needs.
+                    </p>
+                </div>
+                <div class="job card">
+                    <h3>Creative Soft Technology LTD.</h3>
+                    <p class="role">Software Quality Assurance Engineer Intern</p>
+                    <p class="timeline">September 2023 - December 2023</p>
+                    <p class="responsibilities">
+                        Specialized in test planning, manual & automated testing, functionality testing.
+                    </p>
+                </div>
+            </section>
 
-        <section id="experience" class="mb-5">
-            <h2>Experience</h2>
-            <h5>Smart Software Ltd.</h5>
-            <p><strong>Software Quality Assurance Engineer</strong> (May 2024 - February 2025)</p>
-            <ul>
-                <li>Executed manual & automated tests for functionality, UI, load, and performance.</li>
-                <li>Tracked and reported bugs using Bitrix24.</li>
-                <li>Led teams, managed timelines, and ensured on-time project delivery.</li>
-            </ul>
-            <h5>Technical Support Executive</h5>
-            <p>(February 2024 - May 2024)</p>
-            <ul>
-                <li>Provided technical support to customers, resolving issues and answering inquiries.</li>
-                <li>Conducted requirements analysis to understand and address customer needs.</li>
-            </ul>
-            <h5>Creative Soft Technology LTD.</h5>
-            <p><strong>Software Quality Assurance Engineer Intern</strong> (September 2023 - December 2023)</p>
-            <ul>
-                <li>Specialized in test planning, manual & automated testing, functionality testing.</li>
-            </ul>
-        </section>
+            <section id="education">
+                <h2>Education</h2>
+                <div class="school card">
+                    <h3>Daffodil International University-DIU</h3>
+                    <p class="degree">Bachelor's degree, Computer Science & Engineering</p>
+                    <p class="timeline">September 2019 - September 2023</p>
+                </div>
+                <div class="school card">
+                    <h3>Melandah Govt. College, Jamalpur</h3>
+                    <p class="degree">Higher Secondary Certificate, Science</p>
+                    <p class="timeline">2016 - 2018</p>
+                </div>
+            </section>
 
-        <section id="education" class="mb-5">
-            <h2>Education</h2>
-            <h5>Daffodil International University-D IU</h5>
-            <p>Bachelor's degree, Computer Science & Engineering (September 2019 - September 2023)</p>
-            <h5>Melandah Govt. College, Jamalpur</h5>
-            <p>Higher Secondary Certificate, Science (2016 - 2018)</p>
-        </section>
+            <section id="portfolio">
+                <h2>Recent Work</h2>
+                <div class="project card">
+                    <div class="thumbnail"><a href="/link-to-project" target="_blank"><img
+                                src="https://plus.unsplash.com/premium_photo-1685086785054-d047cdc0e525?q=80&w=2664&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3 fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                                alt="Project 1"></a></div>
+                    <h3>Project 1</h3>
+                    <p>
+                        Description of Project 1 goes here. Highlight the technologies used and the impact of the project.
+                        <br>
+                        <a href="/link-to-project" target="_blank">Link to Project</a>
+                    </p>
+                </div>
+                <div class="project card">
+                    <div class="thumbnail"><a href="/link-to-project" target="_blank"><img
+                                src="https://plus.unsplash.com/premium_photo-1685086785077-ff65bf749544?q=80&w=2664&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                                alt="Project 2"></a></div>
+                    <h3>Project 2</h3>
+                    <p>
+                        Description of Project 2 goes here. Highlight the technologies used and the impact of the project.
+                        <br>
+                        <a href="/link-to-project" target="_blank">Link to Project</a>
+                    </p>
+                </div>
+                <div class="project card">
+                    <div class="thumbnail"><a href="/link-to-project" target="_blank"><img
+                                src="https://plus.unsplash.com/premium_photo-1685086785333-976367da9210?q=80&w=2664&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                                alt="Project 3"></a></div>
+                    <h3>Project 3</h3>
+                    <p>
+                        Description of Project 3 goes here. Highlight the technologies used and the impact of the project.
+                        <br>
+                        <a href="/link-to-project" target="_blank">Link to Project</a>
+                    </p>
+                </div>
+            </section>
 
-        <footer class="text-center my-5">
-            <p>&copy; 2023 Md. Abdullah Ibna Harun. All rights reserved.</p>
+            <section id="contact">
+                <h2>Get in Touch</h2>
+                <p>
+                    If you have a project that you'd like to discuss, please get in touch with me at <a
+                        href="mailto:abdullah13426.cse@gmail.com">abdullah13426.cse@gmail.com</a>.
+                </p>
+            </section>
+        </main>
+
+        <footer>
+            <div class="social">
+                <a href="https://twitter.com/username" target="_blank">Twitter</a>
+                <a href="https://linkedin.com/in/mdabdullahibnaharun" target="_blank">LinkedIn</a>
+                <a href="https://github.com/username" target="_blank">GitHub</a>
+            </div>
+            <p>
+                &copy; 2024 Md. Abdullah Ibna Harun. All rights reserved.
+            </p>
         </footer>
     </div>
-
-    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script>
+        // Smooth scrolling for navigation links
+        const navLinks = document.querySelectorAll("nav ul li a");
+        navLinks.forEach((link) => {
+            link.onclick = (e) => {
+                e.preventDefault();
+                const target = document.querySelector(e.target.getAttribute("href"));
+                target.scrollIntoView({
+                    behavior: "smooth",
+                });
+                return false;
+            };
+        });
+    </script>
 </body>
+
 </html>
