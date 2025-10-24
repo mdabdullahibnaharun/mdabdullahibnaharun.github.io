@@ -10,72 +10,75 @@
 
   <style>
     @import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
-    body { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Poppins', sans-serif; }
+    body { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Poppins', sans-serif; background: #FFFFFF; color: #333333; }
 
     /* Navbar */
-    .navbar { display: flex; align-items: center; justify-content: space-between; position: fixed; top: 0; width: 100%; background-image: linear-gradient(90deg, #74D7BB, #53C8B6, #35A99C); z-index: 100; }
-    .logo { padding: 0 5rem; }
-    .logo .logo-heading { color: #fff; font-weight: 700; }
-    .menu { padding: 0 5rem; }
-    .hamburger { display: none; color: #fff; font-size: 25px; cursor: pointer; }
-    .cross-icon { display: none; }
-    .menu .menu-list { display: flex; list-style: none; }
-    .menu-list .menu-list-items { padding: 0.5rem 1rem; }
-    .links { text-decoration: none; color: #fff; font-weight: 500; transition: 0.3s; }
-    .links:hover { border-bottom: 2px solid #fff; }
+    .navbar { display: flex; align-items: center; justify-content: space-between; position: fixed; top: 0; width: 100%; background: #333333; z-index: 100; padding: 1rem 5rem; }
+    .logo-heading { color: #FFFFFF; font-weight: 700; }
+    .menu .menu-list { display: flex; list-style: none; margin: 0; padding: 0; }
+    .menu-list-items { padding: 0.5rem 1rem; }
+    .links { text-decoration: none; color: #FFFFFF; font-weight: 500; transition: 0.3s; }
+    .links:hover { color: #888888; border-bottom: 2px solid #888888; }
+    .hamburger { display: none; color: #FFFFFF; font-size: 25px; cursor: pointer; }
 
     /* Hero */
-    .hero { background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url('https://picsum.photos/1600/900?blur=2'); background-size: cover; background-position: center; height: 100vh; display: flex; align-items: center; justify-content: center; text-align: center; color: #fff; }
+    .hero { background: linear-gradient(rgba(51,51,51,0.7), rgba(51,51,51,0.7)), url('https://picsum.photos/1600/900?blur=2'); background-size: cover; background-position: center; height: 100vh; display: flex; align-items: center; justify-content: center; text-align: center; color: #FFFFFF; padding-top: 4rem; }
     .intro h1 { font-size: 2.5rem; margin: 0.5rem 0; }
-    .intro h4 { font-weight: 400; color: #dfe6e9; }
+    .intro h4 { font-weight: 400; color: #CCCCCC; }
     .intro-buttons { margin-top: 2rem; display: flex; justify-content: center; gap: 20px; }
 
     /* Buttons */
-    .btn { padding: 10px 20px; border-radius: 5px; cursor: pointer; font-weight: 500; letter-spacing: 0.5px; border: none; }
-    .common-btn { background: #35A99C; color: white; border: 2px solid #35A99C; transition: 0.3s; }
-    .common-btn:hover { background: white; color: #35A99C; }
-    .ghost-btn { background: white; color: #35A99C; border: 2px solid #35A99C; transition: 0.3s; }
-    .ghost-btn:hover { background: #35A99C; color: white; }
+    .btn { padding: 10px 20px; border-radius: 5px; cursor: pointer; font-weight: 500; letter-spacing: 0.5px; border: none; transition: 0.3s; }
+    .common-btn { background: #333333; color: #FFFFFF; border: 2px solid #333333; }
+    .common-btn:hover { background: #FFFFFF; color: #333333; }
+    .ghost-btn { background: #FFFFFF; color: #333333; border: 2px solid #333333; }
+    .ghost-btn:hover { background: #333333; color: #FFFFFF; }
 
     /* About */
-    .about { display: flex; align-items: center; justify-content: space-between; background-image: linear-gradient(45deg, #363D73, #2794B3); color: #fff; padding: 5rem; flex-wrap: wrap; }
+    .about { display: flex; align-items: center; justify-content: space-between; background: #F5F5F5; color: #333333; padding: 5rem; flex-wrap: wrap; }
     .about div { max-width: 600px; }
     .about img { width: 400px; border-radius: 20px; }
 
     /* Services */
     .services { padding: 5rem; text-align: center; }
     .my-row { display: flex; justify-content: space-between; flex-wrap: wrap; }
-    .my-card { flex: 1; margin: 1rem; padding: 2rem; text-align: center; background-image: linear-gradient(#74D7BB, #53C8B6, #35A99C); border-radius: 20px; color: #fff; min-width: 250px; }
-    .icon { background: #363D73; width: 80px; height: 80px; margin: 0 auto 1rem; display: flex; align-items: center; justify-content: center; border-radius: 50%; font-size: 30px; }
+    .my-card { flex: 1; margin: 1rem; padding: 2rem; text-align: center; background: #FFFFFF; border-radius: 20px; color: #333333; border: 1px solid #CCCCCC; min-width: 250px; }
+    .icon { background: #333333; color: #FFFFFF; width: 80px; height: 80px; margin: 0 auto 1rem; display: flex; align-items: center; justify-content: center; border-radius: 50%; font-size: 30px; }
 
     /* Projects & Experience */
     .projects, .experience { padding: 5rem; text-align: center; }
-    .project-card, .experience-card { background: #fff; border-radius: 15px; padding: 20px; margin: 1rem; text-align: left; box-shadow: 0 5px 15px rgba(0,0,0,0.1); flex: 1; min-width: 250px; }
+    .project-card, .experience-card { background: #FFFFFF; border-radius: 15px; padding: 20px; margin: 1rem; text-align: left; box-shadow: 0 5px 15px rgba(51,51,51,0.1); flex: 1; min-width: 250px; color: #333333; }
     .cards-row { display: flex; flex-wrap: wrap; justify-content: center; gap: 20px; }
 
     /* Skills & Certifications */
-    .skills { padding: 5rem; background: #f7f9f9; color: #2d3436; }
-    .skills h1 { text-align: center; color: #35A99C; }
+    .skills { padding: 5rem; background: #F5F5F5; color: #333333; }
+    .skills h1 { text-align: center; color: #333333; }
     .skills-list { display: flex; flex-wrap: wrap; justify-content: center; margin-top: 2rem; }
-    .skill-item { border: 2px solid #35A99C; border-radius: 10px; padding: 15px 25px; margin: 10px; background: #fff; font-weight: 500; }
+    .skill-item { border: 2px solid #333333; border-radius: 10px; padding: 15px 25px; margin: 10px; background: #FFFFFF; font-weight: 500; }
     .certifications { margin-top: 3rem; text-align: center; }
     .certifications ul { list-style: none; padding: 0; }
     .certifications li { margin: 8px 0; }
+
+    /* Activities & References */
+    .activities, .references { padding: 3rem; background: #FFFFFF; color: #333333; }
+    .activities h2, .references h2 { text-align: center; margin-bottom: 1rem; }
+    .activities ul, .references ul { list-style: none; padding: 0; text-align: center; }
+    .activities li, .references li { margin: 8px 0; }
 
     /* Contact */
     .contact { padding: 5rem; }
     .contact-content { display: flex; justify-content: space-between; flex-wrap: wrap; }
     .contact-form { display: flex; flex-direction: column; width: 45%; }
-    .form-controls { margin: 1rem 0; padding: 10px; border: 1px solid #ccc; border-radius: 5px; }
-    .contact-details { width: 45%; color: #363D73; }
+    .form-controls { margin: 1rem 0; padding: 10px; border: 1px solid #333333; border-radius: 5px; background: #FFFFFF; color: #333333; }
+    .contact-details { width: 45%; color: #333333; }
 
     /* Footer */
-    .footer { background: #000; color: white; text-align: center; padding: 2rem; }
-    .footer-links { color: white; margin: 0 10px; font-size: 20px; transition: 0.3s; }
-    .footer-links:hover { color: #35A99C; }
+    .footer { background: #333333; color: #FFFFFF; text-align: center; padding: 2rem; }
+    .footer-links { color: #FFFFFF; margin: 0 10px; font-size: 20px; transition: 0.3s; }
+    .footer-links:hover { color: #888888; }
 
     @media screen and (max-width: 768px) {
-      .menu { display: none; background: #53C8B6; position: absolute; right: 0; top: 75px; width: 100%; }
+      .menu { display: none; background: #333333; position: absolute; right: 0; top: 75px; width: 100%; }
       .menu .menu-list { flex-direction: column; align-items: center; }
       .hamburger { display: block; padding: 0 3rem; }
       .about { flex-direction: column; text-align: center; }
@@ -103,6 +106,7 @@
           <li class="menu-list-items"><a href="#projects" class="links">Projects</a></li>
           <li class="menu-list-items"><a href="#experience" class="links">Experience</a></li>
           <li class="menu-list-items"><a href="#skills" class="links">Skills</a></li>
+          <li class="menu-list-items"><a href="#activities" class="links">Activities</a></li>
           <li class="menu-list-items"><a href="#contact" class="links">Contact</a></li>
         </ul>
       </div>
@@ -127,11 +131,11 @@
     <div>
       <h1>About Me</h1>
       <p>
-        I'm a passionate Software Quality Assurance Engineer with over 1.5 years of experience in manual and automated testing using Selenium, JMeter, JUnit, and Postman.
+        I'm a passionate Software Quality Assurance Engineer with over 1.5 years of experience in manual and automated testing using Selenium, JMeter, JUnit, Postman, and Swagger.
         Skilled in bug tracking with Trello and Bitrix24, I ensure quality software delivery through precision and teamwork. Currently pursuing my M.Sc. in Software Engineering (Cybersecurity Major) from Daffodil International University.
       </p>
     </div>
-    <img src="https://picsum.photos/400/300" alt="About Image" />
+    <img src="https://avatars.githubusercontent.com/u/60839928?s=400&u=e289ffbaec7de1d0c767afba186224b72066e557&v=4" alt="Profile Image" />
   </section>
 
   <!-- Services -->
@@ -140,7 +144,7 @@
     <div class="my-row">
       <div class="my-card"><div class="icon"><i class="fas fa-robot"></i></div><h3>Automation Testing</h3><p>Design and maintain Selenium-based automation frameworks with Java, Maven, and JUnit.</p></div>
       <div class="my-card"><div class="icon"><i class="fas fa-bug"></i></div><h3>Manual Testing</h3><p>Comprehensive functional, regression, and UI testing ensuring smooth end-user experience.</p></div>
-      <div class="my-card"><div class="icon"><i class="fas fa-server"></i></div><h3>API & Load Testing</h3><p>Use Postman and JMeter for API reliability, performance, and scalability analysis.</p></div>
+      <div class="my-card"><div class="icon"><i class="fas fa-server"></i></div><h3>API & Load Testing</h3><p>Use Postman, Swagger, and JMeter for API reliability, performance, and scalability analysis.</p></div>
     </div>
   </section>
 
@@ -148,12 +152,11 @@
   <section id="projects" class="projects">
     <h1>Projects</h1>
     <div class="cards-row">
-   
       <div class="project-card">
         <h3>Konnect Automation Testing</h3>
         <p>Implemented test automation suite and performance tests for internal applications to ensure reliability and scalability.</p>
         <p><strong>Technologies:</strong> Selenium, JUnit, Java, Maven</p>
-        <h3>Project Link:</h3><p><a href="https://github.com/mdabdullahibnaharun/konnect-AutomationTesting-Selenium" target="_blank">https://github.com/mdabdullahibnaharun/konnect-AutomationTesting-Selenium</a></p>
+        <p><strong>Project Link:</strong> <a href="https://github.com/mdabdullahibnaharun/konnect-AutomationTesting-Selenium" target="_blank">GitHub Repository</a></p>
       </div>
     </div>
   </section>
@@ -191,19 +194,31 @@
       <div class="skill-item"><i class="fa-solid fa-code"></i> Automation Testing (Selenium)</div>
       <div class="skill-item"><i class="fa-solid fa-gauge-high"></i> JMeter</div>
       <div class="skill-item"><i class="fa-solid fa-vial"></i> Manual Testing</div>
-      <div class="skill-item"><i class="fa-solid fa-database"></i> MySQL, SQL lite</div>
+      <div class="skill-item"><i class="fa-solid fa-database"></i> MySQL, SQLite</div>
       <div class="skill-item"><i class="fa-brands fa-git-alt"></i> Git & GitHub</div>
       <div class="skill-item"><i class="fa-solid fa-diagram-project"></i> SDLC / STLC</div>
       <div class="skill-item"><i class="fa-solid fa-bug-slash"></i> Bugzilla / Bitrix24 / Trello</div>
+      <div class="skill-item"><i class="fa-solid fa-paper-plane"></i> Postman</div>
+      <div class="skill-item"><i class="fa-solid fa-server"></i> Swagger API</div>
     </div>
+
     <div class="certifications">
       <h2>Certifications</h2>
       <ul>
-        <li>✅ Software Testing and Quality Assurance (Skill Jobs, 2023)</li>
-        <li>✅ Java From Basic to Professional (PONDIT, 2021)</li>
-        <li>✅ CyberSAFE (BdREN)</li>
+        <li>✅ <a href="https://tinyurl.com/mdabihsqa" target="_blank">Software Testing And Quality Assurance – Skill Jobs (Dec 2023)</a></li>
+        <li>✅ <a href="https://tinyurl.com/mdabihjavabtop" target="_blank">Java From Basic To Professional – PONDIT (Apr 2021)</a></li>
+        <li>✅ <a href="https://tinyurl.com/mdaihcybersafe" target="_blank">CyberSAFE – BdREN</a></li>
       </ul>
     </div>
+  </section>
+
+  <!-- Activities -->
+  <section id="activities" class="activities">
+    <h2>Activities</h2>
+    <ul>
+      <li>DIU Student Prefect – Assisted in software testing and project labs (Jan 2021 – Apr 2021, Dhaka, Bangladesh)</li>
+      <li>Campus Ambassador – Show The Creativity – Managed team events and social media (Nov 2020 – Jun 2021, Dhaka, Bangladesh)</li>
+    </ul>
   </section>
 
   <!-- Contact -->
@@ -230,7 +245,7 @@
   <footer class="footer">
     <p>© 2025 Md. Abdullah Ibna Harun</p>
     <div>
-      <a class="footer-links" href="https://www.facebook.com" target="_blank"><i class="fab fa-facebook-f"></i></a>
+      <a class="footer-links" href="https://www.facebook.com/mdabdullahibnaharun" target="_blank"><i class="fab fa-facebook-f"></i></a>
       <a class="footer-links" href="https://www.linkedin.com/in/mdabdullahibnaharun" target="_blank"><i class="fab fa-linkedin-in"></i></a>
       <a class="footer-links" href="https://github.com/mdabdullahibnaharun" target="_blank"><i class="fab fa-github"></i></a>
     </div>
