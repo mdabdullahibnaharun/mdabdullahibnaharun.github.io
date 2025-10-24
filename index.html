@@ -48,6 +48,11 @@
     .my-card { flex: 1; margin: 1rem; padding: 2rem; text-align: center; background-image: linear-gradient(#74D7BB, #53C8B6, #35A99C); border-radius: 20px; color: #fff; min-width: 250px; }
     .icon { background: #363D73; width: 80px; height: 80px; margin: 0 auto 1rem; display: flex; align-items: center; justify-content: center; border-radius: 50%; font-size: 30px; }
 
+    /* Projects & Experience */
+    .projects, .experience { padding: 5rem; text-align: center; }
+    .project-card, .experience-card { background: #fff; border-radius: 15px; padding: 20px; margin: 1rem; text-align: left; box-shadow: 0 5px 15px rgba(0,0,0,0.1); flex: 1; min-width: 250px; }
+    .cards-row { display: flex; flex-wrap: wrap; justify-content: center; gap: 20px; }
+
     /* Skills & Certifications */
     .skills { padding: 5rem; background: #f7f9f9; color: #2d3436; }
     .skills h1 { text-align: center; color: #35A99C; }
@@ -76,6 +81,7 @@
       .about { flex-direction: column; text-align: center; }
       .contact-content { flex-direction: column; align-items: center; }
       .contact-form, .contact-details { width: 90%; }
+      .cards-row { flex-direction: column; align-items: center; }
     }
   </style>
 </head>
@@ -94,6 +100,8 @@
           <li class="menu-list-items"><a href="#home" class="links">Home</a></li>
           <li class="menu-list-items"><a href="#about" class="links">About</a></li>
           <li class="menu-list-items"><a href="#services" class="links">Services</a></li>
+          <li class="menu-list-items"><a href="#projects" class="links">Projects</a></li>
+          <li class="menu-list-items"><a href="#experience" class="links">Experience</a></li>
           <li class="menu-list-items"><a href="#skills" class="links">Skills</a></li>
           <li class="menu-list-items"><a href="#contact" class="links">Contact</a></li>
         </ul>
@@ -109,7 +117,7 @@
       <h4>Software QA Engineer | Automation & Manual Testing Specialist</h4>
       <div class="intro-buttons">
         <a href="#contact"><button class="btn common-btn">Hire Me</button></a>
-        <a href="Md_Abdullah_Ibna_Harun_Resume.pdf" download><button class="btn ghost-btn">Download CV</button></a>
+        <a href="md_abdullah_ibna_harun_software_qa.pdf" download><button class="btn ghost-btn">Download CV</button></a>
       </div>
     </div>
   </section>
@@ -133,6 +141,45 @@
       <div class="my-card"><div class="icon"><i class="fas fa-robot"></i></div><h3>Automation Testing</h3><p>Design and maintain Selenium-based automation frameworks with Java, Maven, and JUnit.</p></div>
       <div class="my-card"><div class="icon"><i class="fas fa-bug"></i></div><h3>Manual Testing</h3><p>Comprehensive functional, regression, and UI testing ensuring smooth end-user experience.</p></div>
       <div class="my-card"><div class="icon"><i class="fas fa-server"></i></div><h3>API & Load Testing</h3><p>Use Postman and JMeter for API reliability, performance, and scalability analysis.</p></div>
+    </div>
+  </section>
+
+  <!-- Projects -->
+  <section id="projects" class="projects">
+    <h1>Projects</h1>
+    <div class="cards-row">
+   
+      <div class="project-card">
+        <h3>Konnect Automation Testing</h3>
+        <p>Implemented test automation suite and performance tests for internal applications to ensure reliability and scalability.</p>
+        <p><strong>Technologies:</strong> Selenium, JUnit, Java, Maven</p>
+        <h3>Project Link:</h3><p><a href="https://github.com/mdabdullahibnaharun/konnect-AutomationTesting-Selenium" target="_blank">https://github.com/mdabdullahibnaharun/konnect-AutomationTesting-Selenium</a></p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Experience -->
+  <section id="experience" class="experience">
+    <h1>Experience</h1>
+    <div class="cards-row">
+      <div class="experience-card">
+        <h3>Software QA Engineer</h3>
+        <p>Skill Jobs | Dec 2023 – Present</p>
+        <ul>
+          <li>Performed automation testing using Selenium and JUnit.</li>
+          <li>Executed manual testing and bug tracking using Trello and Bitrix24.</li>
+          <li>Collaborated with developers to resolve issues and ensure quality delivery.</li>
+        </ul>
+      </div>
+      <div class="experience-card">
+        <h3>QA Intern</h3>
+        <p>Freelance / Personal Projects | 2022 – 2023</p>
+        <ul>
+          <li>Developed test cases and executed manual testing for multiple projects.</li>
+          <li>Implemented basic automation scripts using Selenium and Postman.</li>
+          <li>Documented software defects and performance issues efficiently.</li>
+        </ul>
+      </div>
     </div>
   </section>
 
