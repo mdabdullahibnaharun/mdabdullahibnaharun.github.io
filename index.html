@@ -1,365 +1,210 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Md. Abdullah Ibna Harun - Portfolio</title>
-    <style>
-        /* Inter Font from Google Fonts */
-        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Md. Abdullah Ibna Harun | QA Portfolio</title>
 
-        /* VARIABLES */
-        :root {
-            --accent-color: #47ebeb;
-            --background-color: #2a2a31;
-            --text-color: #fff;
-            --text-color-muted: #b9b9b9;
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer" />
 
-            /* spacing */
-            --space-xs: 4px;
-            --space-sm: 8px;
-            --space-md: 16px;
-            --space-lg: 32px;
-            --space-xl: 64px;
-            --space-xxl: 128px;
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+    body { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Poppins', sans-serif; }
 
-            /* typography */
-            --font-size-xs: 14px;
-            --font-size-sm: 16px;
-            --font-size-md: 18px;
-            --font-size-lg: 24px;
-            --font-size-xl: 28px;
-            --font-size-xxl: 88px;
-        }
+    /* Navbar */
+    .navbar { display: flex; align-items: center; justify-content: space-between; position: fixed; top: 0; width: 100%; background-image: linear-gradient(90deg, #74D7BB, #53C8B6, #35A99C); z-index: 100; }
+    .logo { padding: 0 5rem; }
+    .logo .logo-heading { color: #fff; font-weight: 700; }
+    .menu { padding: 0 5rem; }
+    .hamburger { display: none; color: #fff; font-size: 25px; cursor: pointer; }
+    .cross-icon { display: none; }
+    .menu .menu-list { display: flex; list-style: none; }
+    .menu-list .menu-list-items { padding: 0.5rem 1rem; }
+    .links { text-decoration: none; color: #fff; font-weight: 500; transition: 0.3s; }
+    .links:hover { border-bottom: 2px solid #fff; }
 
-        body {
-            background-color: var(--background-color);
-            font-family: Inter, Arial, sans-serif;
-            margin: 0;
-            padding: 0 20px;
-            color: var(--text-color);
-        }
+    /* Hero */
+    .hero { background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url('https://picsum.photos/1600/900?blur=2'); background-size: cover; background-position: center; height: 100vh; display: flex; align-items: center; justify-content: center; text-align: center; color: #fff; }
+    .intro h1 { font-size: 2.5rem; margin: 0.5rem 0; }
+    .intro h4 { font-weight: 400; color: #dfe6e9; }
+    .intro-buttons { margin-top: 2rem; display: flex; justify-content: center; gap: 20px; }
 
-        #page {
-            display: flex;
-            flex-direction: column;
-            max-width: 1000px;
-            margin: 0 auto;
-            padding-top: var(--space-md);
-        }
+    /* Buttons */
+    .btn { padding: 10px 20px; border-radius: 5px; cursor: pointer; font-weight: 500; letter-spacing: 0.5px; border: none; }
+    .common-btn { background: #35A99C; color: white; border: 2px solid #35A99C; transition: 0.3s; }
+    .common-btn:hover { background: white; color: #35A99C; }
+    .ghost-btn { background: white; color: #35A99C; border: 2px solid #35A99C; transition: 0.3s; }
+    .ghost-btn:hover { background: #35A99C; color: white; }
 
-        /* LOGO AND NAVIGATION */
+    /* About */
+    .about { display: flex; align-items: center; justify-content: space-between; background-image: linear-gradient(45deg, #363D73, #2794B3); color: #fff; padding: 5rem; flex-wrap: wrap; }
+    .about div { max-width: 600px; }
+    .about img { width: 400px; border-radius: 20px; }
 
-        header {
-            display: flex;
-            align-items: center;
-            padding: 20px 0;
-        }
+    /* Services */
+    .services { padding: 5rem; text-align: center; }
+    .my-row { display: flex; justify-content: space-between; flex-wrap: wrap; }
+    .my-card { flex: 1; margin: 1rem; padding: 2rem; text-align: center; background-image: linear-gradient(#74D7BB, #53C8B6, #35A99C); border-radius: 20px; color: #fff; min-width: 250px; }
+    .icon { background: #363D73; width: 80px; height: 80px; margin: 0 auto 1rem; display: flex; align-items: center; justify-content: center; border-radius: 50%; font-size: 30px; }
 
-        nav {
-            margin-left: auto;
-        }
+    /* Skills & Certifications */
+    .skills { padding: 5rem; background: #f7f9f9; color: #2d3436; }
+    .skills h1 { text-align: center; color: #35A99C; }
+    .skills-list { display: flex; flex-wrap: wrap; justify-content: center; margin-top: 2rem; }
+    .skill-item { border: 2px solid #35A99C; border-radius: 10px; padding: 15px 25px; margin: 10px; background: #fff; font-weight: 500; }
+    .certifications { margin-top: 3rem; text-align: center; }
+    .certifications ul { list-style: none; padding: 0; }
+    .certifications li { margin: 8px 0; }
 
-        .logo {
-            font-size: var(--font-size-lg);
-            font-weight: 700;
-        }
+    /* Contact */
+    .contact { padding: 5rem; }
+    .contact-content { display: flex; justify-content: space-between; flex-wrap: wrap; }
+    .contact-form { display: flex; flex-direction: column; width: 45%; }
+    .form-controls { margin: 1rem 0; padding: 10px; border: 1px solid #ccc; border-radius: 5px; }
+    .contact-details { width: 45%; color: #363D73; }
 
-        nav ul {
-            display: flex;
-            gap: 40px;
-            list-style: none;
-            margin: 0;
-        }
+    /* Footer */
+    .footer { background: #000; color: white; text-align: center; padding: 2rem; }
+    .footer-links { color: white; margin: 0 10px; font-size: 20px; transition: 0.3s; }
+    .footer-links:hover { color: #35A99C; }
 
-        nav ul li a:link,
-        nav ul li a:visited {
-            color: var(--text-color);
-            opacity: 0.7;
-        }
-
-        /* TYPOGRAPHY */
-
-        a:link,
-        a:visited {
-            color: var(--accent-color);
-            text-decoration: none;
-        }
-
-        h1 {
-            font-size: var(--font-size-xxl);
-            margin-bottom: var(--space-sm);
-        }
-
-        h2 {
-            font-size: var(--font-size-xl);
-            color: var(--accent-color);
-            margin-bottom: var(--space-lg);
-            font-weight: 200;
-            margin-top: var(--space-xl);
-        }
-
-        h3 {
-            font-size: var(--font-size-lg);
-            margin-bottom: var(--space-sm);
-            font-weight: 400;
-        }
-
-        p {
-            font-size: var(--font-size-sm);
-            font-weight: 400;
-            line-height: 1.6;
-            color: var(--text-color-muted);
-            margin-bottom: var(--space-md);
-        }
-
-        /* SECTIONS  */
-
-        #about {
-            margin-top: var(--space-xxl);
-        }
-
-        #about h1 {
-            font-size: var(--font-size-xxl);
-            margin-bottom: var(--space-sm);
-        }
-
-        #about p {
-            font-size: var(--font-size-xl);
-            font-weight: 200;
-            line-height: 1.4;
-            color: var(--text-color);
-        }
-
-        section {
-            margin-top: var(--space-xxl);
-            margin-bottom: var(--space-xxl);
-        }
-
-        .card {
-            background: linear-gradient(90deg, #35353f 0%, #3d3b3e 50%, #3d3b3e 50%);
-            border-radius: 20px;
-            padding: var(--space-xs) var(--space-lg) var(--space-lg);
-            border: 0.5px solid #484851;
-            margin-bottom: var(--space-lg);
-        }
-
-        .card p {
-            margin: var(--space-xs) 0;
-            font-size: var(--font-size-xs);
-        }
-
-        /* CONTACT  */
-
-        #contact {
-            text-align: center;
-        }
-
-        #contact p {
-            font-size: var(--font-size-lg);
-            font-weight: 200;
-            line-height: 1.4;
-            color: var(--text-color);
-        }
-
-        /* FOOTER */
-
-        footer {
-            margin-top: var(--space-xl);
-            padding: 0 0 var(-- space-lg);
-            color: var(--text-color-muted);
-            text-align: center;
-        }
-
-        footer .social {
-            display: flex;
-            gap: var(--space-lg);
-            margin-bottom: var(--space-lg);
-            justify-content: center;
-            align-items: center;
-        }
-
-        footer .social a:hover svg {
-            fill: var(--accent-color);
-        }
-    </style>
+    @media screen and (max-width: 768px) {
+      .menu { display: none; background: #53C8B6; position: absolute; right: 0; top: 75px; width: 100%; }
+      .menu .menu-list { flex-direction: column; align-items: center; }
+      .hamburger { display: block; padding: 0 3rem; }
+      .about { flex-direction: column; text-align: center; }
+      .contact-content { flex-direction: column; align-items: center; }
+      .contact-form, .contact-details { width: 90%; }
+    }
+  </style>
 </head>
 
 <body>
-    <div id="page">
+  <!-- Navbar -->
+  <header class="header">
+    <nav class="navbar">
+      <div class="logo"><h2 class="logo-heading">Md. Abdullah Ibna Harun</h2></div>
+      <div class="hamburger" id="hamburger">
+        <i class="fas fa-bars hamburger-icon"></i>
+        <i class="fas fa-times cross-icon"></i>
+      </div>
+      <div class="menu">
+        <ul class="menu-list">
+          <li class="menu-list-items"><a href="#home" class="links">Home</a></li>
+          <li class="menu-list-items"><a href="#about" class="links">About</a></li>
+          <li class="menu-list-items"><a href="#services" class="links">Services</a></li>
+          <li class="menu-list-items"><a href="#skills" class="links">Skills</a></li>
+          <li class="menu-list-items"><a href="#contact" class="links">Contact</a></li>
+        </ul>
+      </div>
+    </nav>
+  </header>
 
-        <header>
-            <div class="logo">
-                <a href="/">Md. Abdullah Ibna Harun</a>
-            </div>
-            <nav>
-                <ul>
-                    <li><a href="#experience">Experience</a></li>
-                    <li><a href="#portfolio">Recent Work</a></li>
-                    <li><a href="#contact">Contact</a></li>
-                </ul>
-            </nav>
-        </header>
-
-        <main>
-            <div id="about">
-                <h1>
-                    Hi, I'm Md. Abdullah Ibna Harun.
-                </h1>
-                <p>
-                    Aspiring Software Engineer with a passion for building scalable software solutions. Proficient in Java, Spring Boot, Angular, and Microservices. Currently open to work opportunities.
-                </p>
-            </div>
-
-            <section id="skills">
-                <h2>Skills</h2>
-                <div class="skill card">
-                    <h3>
-                        Software Development
-                    </h3>
-                    <p>
-                        &bull; Proficient in Java, Spring Framework, and Angular.
-                        <br>
-                        &bull; Experience in building RESTful APIs and microservices.
-                    </p>
-                </div>
-
-                <div class="skill card">
-                    <h3>
-                        Software Quality Assurance
-                    </h3>
-                    <p>
-                        &bull; Expertise in manual and automated testing.
-                        <br>
-                        &bull; Familiar with testing tools and methodologies.
-                    </p>
-                </div>
-
-                <div class="skill card">
-                    <h3>
-                        Project Management
-                    </h3>
-                    <p>
-                        &bull; Experience in managing software projects and teams.
-                        <br>
-                        &bull; Strong organizational and communication skills.
-                    </p>
-                </div>
-            </section>
-
-            <section id="experience">
-                <h2>Experience</h2>
-                <div class="job card">
-                    <h3>Smart Software Ltd.</h3>
-                    <p class="role">Software Quality Assurance Engineer</p>
-                    <p class="timeline">May 2024 - February 2025</p>
-                    <p class="responsibilities">
-                        Executed manual & automated tests for functionality, UI, load, and performance. Tracked and reported bugs using Bitrix24. Led teams, managed timelines, and ensured on-time project delivery.
-                    </p>
-                </div>
-                <div class="job card">
-                    <h3>Technical Support Executive</h3>
-                    <p class="timeline">February 2024 - May 2024</p>
-                    <p class="responsibilities">
-                        Provided technical support to customers, resolving issues and answering inquiries. Conducted requirements analysis to understand and address customer needs.
-                    </p>
-                </div>
-                <div class="job card">
-                    <h3>Creative Soft Technology LTD.</h3>
-                    <p class="role">Software Quality Assurance Engineer Intern</p>
-                    <p class="timeline">September 2023 - December 2023</p>
-                    <p class="responsibilities">
-                        Specialized in test planning, manual & automated testing, functionality testing.
-                    </p>
-                </div>
-            </section>
-
-            <section id="education">
-                <h2>Education</h2>
-                <div class="school card">
-                    <h3>Daffodil International University-DIU</h3>
-                    <p class="degree">Bachelor's degree, Computer Science & Engineering</p>
-                    <p class="timeline">September 2019 - September 2023</p>
-                </div>
-                <div class="school card">
-                    <h3>Melandah Govt. College, Jamalpur</h3>
-                    <p class="degree">Higher Secondary Certificate, Science</p>
-                    <p class="timeline">2016 - 2018</p>
-                </div>
-            </section>
-
-            <section id="portfolio">
-                <h2>Recent Work</h2>
-                <div class="project card">
-                    <div class="thumbnail"><a href="/link-to-project" target="_blank"><img
-                                src="https://plus.unsplash.com/premium_photo-1685086785054-d047cdc0e525?q=80&w=2664&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3 fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-                                alt="Project 1"></a></div>
-                    <h3>Project 1</h3>
-                    <p>
-                        Description of Project 1 goes here. Highlight the technologies used and the impact of the project.
-                        <br>
-                        <a href="/link-to-project" target="_blank">Link to Project</a>
-                    </p>
-                </div>
-                <div class="project card">
-                    <div class="thumbnail"><a href="/link-to-project" target="_blank"><img
-                                src="https://plus.unsplash.com/premium_photo-1685086785077-ff65bf749544?q=80&w=2664&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-                                alt="Project 2"></a></div>
-                    <h3>Project 2</h3>
-                    <p>
-                        Description of Project 2 goes here. Highlight the technologies used and the impact of the project.
-                        <br>
-                        <a href="/link-to-project" target="_blank">Link to Project</a>
-                    </p>
-                </div>
-                <div class="project card">
-                    <div class="thumbnail"><a href="/link-to-project" target="_blank"><img
-                                src="https://plus.unsplash.com/premium_photo-1685086785333-976367da9210?q=80&w=2664&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-                                alt="Project 3"></a></div>
-                    <h3>Project 3</h3>
-                    <p>
-                        Description of Project 3 goes here. Highlight the technologies used and the impact of the project.
-                        <br>
-                        <a href="/link-to-project" target="_blank">Link to Project</a>
-                    </p>
-                </div>
-            </section>
-
-            <section id="contact">
-                <h2>Get in Touch</h2>
-                <p>
-                    If you have a project that you'd like to discuss, please get in touch with me at <a
-                        href="mailto:abdullah13426.cse@gmail.com">abdullah13426.cse@gmail.com</a>.
-                </p>
-            </section>
-        </main>
-
-        <footer>
-            <div class="social">
-                <a href="https://twitter.com/username" target="_blank">Twitter</a>
-                <a href="https://linkedin.com/in/mdabdullahibnaharun" target="_blank">LinkedIn</a>
-                <a href="https://github.com/username" target="_blank">GitHub</a>
-            </div>
-            <p>
-                &copy; 2024 Md. Abdullah Ibna Harun. All rights reserved.
-            </p>
-        </footer>
+  <!-- Hero -->
+  <section id="home" class="hero">
+    <div class="intro">
+      <h3>Hello, I'm</h3>
+      <h1>Md. Abdullah Ibna Harun</h1>
+      <h4>Software QA Engineer | Automation & Manual Testing Specialist</h4>
+      <div class="intro-buttons">
+        <a href="#contact"><button class="btn common-btn">Hire Me</button></a>
+        <a href="Md_Abdullah_Ibna_Harun_Resume.pdf" download><button class="btn ghost-btn">Download CV</button></a>
+      </div>
     </div>
-    <script>
-        // Smooth scrolling for navigation links
-        const navLinks = document.querySelectorAll("nav ul li a");
-        navLinks.forEach((link) => {
-            link.onclick = (e) => {
-                e.preventDefault();
-                const target = document.querySelector(e.target.getAttribute("href"));
-                target.scrollIntoView({
-                    behavior: "smooth",
-                });
-                return false;
-            };
-        });
-    </script>
-</body>
+  </section>
 
+  <!-- About -->
+  <section id="about" class="about">
+    <div>
+      <h1>About Me</h1>
+      <p>
+        I'm a passionate Software Quality Assurance Engineer with over 1.5 years of experience in manual and automated testing using Selenium, JMeter, JUnit, and Postman.
+        Skilled in bug tracking with Trello and Bitrix24, I ensure quality software delivery through precision and teamwork. Currently pursuing my M.Sc. in Software Engineering (Cybersecurity Major) from Daffodil International University.
+      </p>
+    </div>
+    <img src="https://picsum.photos/400/300" alt="About Image" />
+  </section>
+
+  <!-- Services -->
+  <section id="services" class="services">
+    <h1>My Services</h1>
+    <div class="my-row">
+      <div class="my-card"><div class="icon"><i class="fas fa-robot"></i></div><h3>Automation Testing</h3><p>Design and maintain Selenium-based automation frameworks with Java, Maven, and JUnit.</p></div>
+      <div class="my-card"><div class="icon"><i class="fas fa-bug"></i></div><h3>Manual Testing</h3><p>Comprehensive functional, regression, and UI testing ensuring smooth end-user experience.</p></div>
+      <div class="my-card"><div class="icon"><i class="fas fa-server"></i></div><h3>API & Load Testing</h3><p>Use Postman and JMeter for API reliability, performance, and scalability analysis.</p></div>
+    </div>
+  </section>
+
+  <!-- Skills & Certifications -->
+  <section id="skills" class="skills">
+    <h1>Technical Skills & Certifications</h1>
+    <div class="skills-list">
+      <div class="skill-item"><i class="fa-brands fa-java"></i> Java</div>
+      <div class="skill-item"><i class="fa-solid fa-code"></i> Selenium</div>
+      <div class="skill-item"><i class="fa-solid fa-gauge-high"></i> JMeter</div>
+      <div class="skill-item"><i class="fa-solid fa-vial"></i> Manual Testing</div>
+      <div class="skill-item"><i class="fa-solid fa-database"></i> MySQL</div>
+      <div class="skill-item"><i class="fa-brands fa-git-alt"></i> Git & GitHub</div>
+      <div class="skill-item"><i class="fa-solid fa-diagram-project"></i> SDLC / STLC</div>
+      <div class="skill-item"><i class="fa-solid fa-bug-slash"></i> Bugzilla / Bitrix24</div>
+    </div>
+    <div class="certifications">
+      <h2>Certifications</h2>
+      <ul>
+        <li>✅ Software Testing and Quality Assurance (Skill Jobs, 2023)</li>
+        <li>✅ Java From Basic to Professional (PONDIT, 2021)</li>
+        <li>✅ CyberSAFE (BdREN)</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- Contact -->
+  <section id="contact" class="contact">
+    <h1>Contact Me</h1>
+    <div class="contact-content">
+      <form class="contact-form">
+        <input class="form-controls" type="text" placeholder="Your Name" required />
+        <input class="form-controls" type="email" placeholder="Your Email" required />
+        <textarea class="form-controls" rows="5" placeholder="Your Message"></textarea>
+        <button class="btn common-btn" type="submit">Send Message</button>
+      </form>
+      <div class="contact-details">
+        <h3>Email:</h3><p>mdabdullahih13426@gmail.com</p>
+        <h3>Phone:</h3><p>+8801786287766</p>
+        <h3>LinkedIn:</h3><p><a href="https://linkedin.com/in/mdabdullahibnaharun" target="_blank">linkedin.com/in/mdabdullahibnaharun</a></p>
+        <h3>GitHub:</h3><p><a href="https://github.com/mdabdullahibnaharun" target="_blank">github.com/mdabdullahibnaharun</a></p>
+        <h3>Location:</h3><p>Dhaka, Bangladesh</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <p>© 2025 Md. Abdullah Ibna Harun | Built with ❤️ and QA precision</p>
+    <div>
+      <a class="footer-links" href="https://www.facebook.com" target="_blank"><i class="fab fa-facebook-f"></i></a>
+      <a class="footer-links" href="https://www.linkedin.com/in/mdabdullahibnaharun" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+      <a class="footer-links" href="https://github.com/mdabdullahibnaharun" target="_blank"><i class="fab fa-github"></i></a>
+    </div>
+  </footer>
+
+  <script>
+    const hamburger = document.getElementById('hamburger');
+    const menu = document.querySelector('.menu');
+    hamburger.addEventListener('click', function () {
+      const hamIcon = this.querySelector('.hamburger-icon');
+      const crossIcon = this.querySelector('.cross-icon');
+      if (hamIcon.style.display === "none") {
+        hamIcon.style.display = "inline-block";
+        menu.style.display = "none";
+        crossIcon.style.display = "none";
+      } else {
+        crossIcon.style.display = "inline-block";
+        hamIcon.style.display = "none";
+        menu.style.display = "block";
+      }
+    });
+  </script>
+</body>
 </html>
