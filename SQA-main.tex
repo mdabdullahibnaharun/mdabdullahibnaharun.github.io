@@ -1,0 +1,193 @@
+%-------------------------
+% Resume in Latex
+% Author : Gennadii Chursov
+% Based off of: https://github.com/sb2nov/resume and https://www.overleaf.com/latex/templates/jakes-resume/syzfjbzwjncs
+% License : MIT
+%------------------------
+
+\documentclass[letterpaper,11pt]{article}
+
+\usepackage{latexsym}
+\usepackage[empty]{fullpage}
+\usepackage{titlesec}
+\usepackage{marvosym}
+\usepackage[usenames,dvipsnames]{color}
+\usepackage{verbatim}
+\usepackage{enumitem}
+\usepackage[hidelinks]{hyperref}
+\usepackage{fancyhdr}
+\usepackage[english]{babel}
+\usepackage{tabularx}
+\input{glyphtounicode}
+
+\pagestyle{fancy}
+\fancyhf{} % clear all header and footer fields
+\fancyfoot{}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+
+% Adjust margins
+\addtolength{\oddsidemargin}{-0.5in}
+\addtolength{\evensidemargin}{-0.5in}
+\addtolength{\textwidth}{1in}
+\addtolength{\topmargin}{-0.6in} 
+\addtolength{\textheight}{1.1in} 
+
+\urlstyle{same}
+
+\raggedbottom
+\raggedright
+\setlength{\tabcolsep}{0in}
+
+\titleformat{\section}{
+  \vspace{-4pt}\scshape\raggedright\large
+}{}{0em}{}[\color{black}\titlerule \vspace{-4pt}]
+
+\pdfgentounicode=1
+
+%-------------------------
+% Custom commands with small gaps
+\newcommand{\resumeItem}[1]{
+  \item\small{
+    {#1 \vspace{-1pt}}
+  }
+}
+
+\newcommand{\resumeSubheading}[4]{
+  \vspace{-1pt}\item
+    \begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
+      \textbf{#1} & #2 \\
+      \textit{\small#3} & \textit{\small #4} \\
+    \end{tabular*}\vspace{-3pt}
+}
+
+\newcommand{\resumeSubSubheading}[2]{
+    \item
+    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+      \textit{\small#1} & \textit{\small #2} \\
+    \end{tabular*}\vspace{-3pt}
+}
+
+\newcommand{\resumeProjectHeading}[2]{
+    \item
+    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+      \small#1 & #2 \\
+    \end{tabular*}\vspace{-3pt}
+}
+
+\newcommand{\resumeSubItem}[1]{\resumeItem{#1}\vspace{-2pt}}
+\renewcommand\labelitemii{$\vcenter{\hbox{\tiny$\bullet$}}$}
+\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=0.15in, itemsep=2pt, parsep=1pt, topsep=2pt, label={}]}
+\newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
+\newcommand{\resumeItemListStart}{\begin{itemize}[itemsep=1.5pt, parsep=1pt, topsep=1.5pt]}
+\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-3pt}}
+
+%-------------------------------------------
+%%%%%%  RESUME STARTS HERE  %%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{document}
+%----------HEADING with Icons (compatible)----------
+\begin{center}
+    \textbf{\Huge \scshape Md. Abdullah Ibna Harun} \\[1pt]
+    \small \textit{Software Quality Assurance Engineer} \\[3pt]
+    \begin{tabular}{@{}p{0.48\textwidth} p{0.48\textwidth}@{}}
+        \Mobilefone~+8801786287766 & LinkedIn: \href{https://www.linkedin.com/in/mdabdullahibnaharun}{linkedin.com/in/mdabdullahibnaharun} \\
+        \Letter~\href{mailto:mdabdullahih13426@gmail.com}{mdabdullahih13426@gmail.com} & GitHub: \href{https://github.com/mdabdullahibnaharun}{github.com/mdabdullahibnaharun} \\
+        \Mundus~20 Sukrabad, Dhaka-1207, Bangladesh & Portfolio: \href{https://mdabdullahibnaharun.github.io}{mdabdullahibnaharun.github.io} \\
+    \end{tabular}
+\end{center}
+
+
+%-----------Objective-----------
+\section*{Objective}
+Software QA Engineer with 1.5+ years in manual and automated testing (Selenium, JMeter, JUnit, Postman). Experienced in bug tracking (Trello, Bitrix24), reducing post-release defects. Solved 300+ coding challenges. Certified in Software Testing and QA and Java Web Technologies. Seeking a full-time QA role.
+
+%-----------TECHNICAL SKILLS-----------
+\section{Technical Skills}
+\begin{itemize}[leftmargin=0.15in, itemsep=1pt, parsep=1pt, topsep=1pt, label={}]
+    \small{\item{
+     \textbf{Languages}: Java, Python, C, C++, SQL; 
+     \textbf{Web/API}: Postman, REST APIs, Swagger; 
+     \textbf{Testing}: Manual, Selenium, JMeter, JUnit; 
+     \textbf{Version Control}: Git, GitHub; 
+     \textbf{Databases}: MySQL, SQLite; 
+     \textbf{Methodologies}: Agile, Waterfall, SDLC, STLC;
+     \textbf{Documentation:} Technical Documentation, SRS, Testing Reports
+     \textbf{Tools}: Trello, Bitrix24, Bugzilla, MS Teams
+    }}
+\end{itemize}
+
+%-----------EXPERIENCE-----------
+\section{Experience}
+\resumeSubHeadingListStart
+
+    \resumeSubheading
+      {Smart Software Ltd.}{Feb 2024 -- Feb 2025}
+      {Software QA Engineer}{Dhaka, Bangladesh}
+      \resumeItemListStart
+        \resumeItem{Performed manual and automated tests, led 4+ members, ensured on-time delivery of 200+ features.}
+      \resumeItemListEnd
+
+    \resumeSubheading
+      {Creative Soft Technology Ltd.}{Sept 2023 -- Dec 2023}
+      {SQA Engineer Intern}{Dhaka, Bangladesh}
+      \resumeItemListStart
+        \resumeItem{Tested \href{https://konnect.creativesofttechnology.com/}{Konnect Project} manually and automated, tracked bugs via Trello.}
+      \resumeItemListEnd
+
+\resumeSubHeadingListEnd
+
+%-----------PROJECTS-----------
+\section{Projects}
+\resumeSubHeadingListStart
+    \resumeProjectHeading
+      {\textbf{Konnect Automation Testing (Selenium)} $|$ \emph{Java, Selenium, JUnit, Maven}}{Sept 2023 -- Dec 2023}
+      \resumeItemListStart
+        \resumeItem{Automated 50+ user actions, used Maven. \href{https://github.com/mdabdullahibnaharun/konnect-AutomationTesting-Selenium}{ GitHub link: https://github.com/mdabdullahibnaharun/konnect-AutomationTesting-Selenium}.}
+      \resumeItemListEnd
+\resumeSubHeadingListEnd
+
+%-----------EDUCATION-----------
+\section{Education}
+\resumeSubHeadingListStart
+    \resumeSubheading
+      {Daffodil International University}{Dhaka, Bangladesh}
+      {M.Sc. Software Engineering (Cybersecurity)}{Jul 2025 -- Running}
+    \resumeSubheading
+      {Daffodil International University}{Dhaka, Bangladesh}
+      {B.Sc. CSE (CGPA: 3.78/4.00)}{Graduated Feb 2024}
+\resumeSubHeadingListEnd
+
+%-----------CERTIFICATIONS-----------
+\section{Certifications}
+\begin{itemize}[leftmargin=0.15in, itemsep=1pt, parsep=1pt, topsep=1pt, label={}]
+    \small{\item{
+     \textbf{Software Testing And Quality Assurance} – Skill Jobs (Dec 2023) \href{https://tinyurl.com/mdabihsqa}{Certificate: https://tinyurl.com/mdabihsqa} \\
+     \textbf{Java From Basic To Professional} – PONDIT (Apr 2021) \href{https://tinyurl.com/mdabihjavabtop}{Certificate: https://tinyurl.com/mdabihjavabtop}
+    \textbf{CyberSAFE} – BdREN (Apr 2023) \href{https://tinyurl.com/mdabihjavabtop}{Certificate: https://tinyurl.com/mdaihcybersafe}
+    }}
+\end{itemize}
+
+%-----------EXTRA CURRICULAR ACTIVITIES-----------
+\section{Activities}
+\resumeSubHeadingListStart
+    \resumeSubheading
+      {DIU Student Prefect}{Jan 2021 -- Apr 2021}
+      {Assisted in software testing and project labs}{Dhaka, Bangladesh}
+    \resumeSubheading
+      {Campus Ambassador – Show The Creativity}{Nov 2020 -- Jun 2021}
+      {Managed team events and social media events}{Dhaka, Bangladesh}
+\resumeSubHeadingListEnd
+%-----------REFERENCES-----------
+\section{References}
+\begin{itemize}[leftmargin=0.15in, itemsep=1pt, parsep=1pt, topsep=1pt, label={}]
+    \small{
+    \item \textbf{Senjuti Ghosh} – SQA Engineer, Creative Soft Technology LTD. (Contact: +8801782760874)
+    \item \textbf{Shah Nawaze Pavel} – CTO, Web Xpress (Contact: +8801711871722)
+    \item \textbf{Mr. Saiful Islam} – Assistant Professor, Dept. of CSE, Daffodil International University (Contact: +8801989089279)
+    }
+\end{itemize}
+
+
+%-------------------------------------------
+\end{document}
