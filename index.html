@@ -3,176 +3,196 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Md. Abdullah Ibna Harun | SQA Portfolio</title>
+  <title>Md. Abdullah Ibna Harun | IT & SQA Portfolio</title>
 
   <!-- Font Awesome -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer" />
 
   <style>
-    @import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
-    body { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Poppins', sans-serif; background: #FFFFFF; color: #333333; }
+    @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+    body { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Poppins', sans-serif; background: #FFFFFF; color: #333333; scroll-behavior: smooth; }
 
- /* Navbar */
-.navbar { 
-    display: flex; 
-    align-items: center; 
-    justify-content: space-between; 
-    position: fixed; 
-    top: 0; 
-    width: 100%; 
-    background: #333333; 
-    z-index: 100; 
-    padding: 0.6rem 2rem; 
-    box-sizing: border-box;
-}
-
-.logo-heading { 
-    color: #FFFFFF; 
-    font-weight: 700; 
-    font-size: 1.5rem; 
-}
-
-.menu .menu-list { 
-    display: flex; 
-    list-style: none; 
-    margin: 0; 
-    padding: 0; 
-    flex-wrap: wrap; /* allows items to wrap to next line if screen is small */
-}
-
-.menu-list-items { 
-    padding: 0.4rem 0.8rem; 
-}
-
-.links { 
-    text-decoration: none; 
-    color: #FFFFFF; 
-    font-weight: 500; 
-    transition: 0.3s; 
-}
-
-.links:hover { 
-    color: #888888; 
-    border-bottom: 2px solid #888888; 
-}
-
-.hamburger { 
-    display: none; 
-    color: #FFFFFF; 
-    font-size: 18px; 
-    cursor: pointer; 
-}
-
-/* Responsive for small screens */
-@media screen and (max-width: 768px) {
-    .menu { 
-        display: none; 
-        position: absolute; 
-        top: 60px; 
-        right: 0; 
+    /* Navbar */
+    .navbar { 
+        display: flex; 
+        align-items: center; 
+        justify-content: space-between; 
+        position: fixed; 
+        top: 0; 
         width: 100%; 
         background: #333333; 
-        flex-direction: column; 
-        align-items: center; 
+        z-index: 100; 
+        padding: 0.6rem 2rem; 
+        box-sizing: border-box;
     }
-    .menu .menu-list { 
-        flex-direction: column; 
-        width: 100%;
-    }
-    .menu-list-items { 
-        width: 100%; 
-        text-align: center; 
-        padding: 1rem 0; 
-    }
-    .hamburger { 
-        display: block; 
-    }
-}
 
+    .logo-heading { 
+        color: #FFFFFF; 
+        font-weight: 700; 
+        font-size: 1.5rem; 
+        margin: 0;
+    }
+
+    .menu .menu-list { 
+        display: flex; 
+        list-style: none; 
+        margin: 0; 
+        padding: 0; 
+        flex-wrap: wrap; 
+    }
+
+    .menu-list-items { 
+        padding: 0.4rem 0.8rem; 
+    }
+
+    .links { 
+        text-decoration: none; 
+        color: #FFFFFF; 
+        font-weight: 500; 
+        transition: 0.3s; 
+    }
+
+    .links:hover { 
+        color: #888888; 
+        border-bottom: 2px solid #888888; 
+    }
+
+    .hamburger { 
+        display: none; 
+        color: #FFFFFF; 
+        font-size: 18px; 
+        cursor: pointer; 
+    }
+
+    .hamburger .cross-icon {
+        display: none;
+    }
+
+    /* Responsive for small screens */
+    @media screen and (max-width: 768px) {
+        .menu { 
+            display: none; 
+            position: absolute; 
+            top: 60px; 
+            right: 0; 
+            width: 100%; 
+            background: #333333; 
+            flex-direction: column; 
+            align-items: center; 
+        }
+        .menu .menu-list { 
+            flex-direction: column; 
+            width: 100%;
+        }
+        .menu-list-items { 
+            width: 100%; 
+            text-align: center; 
+            padding: 1rem 0; 
+        }
+        .hamburger { 
+            display: block; 
+        }
+    }
 
     /* Hero */
-    .hero { background: linear-gradient(rgba(51,51,51,0.7), rgba(51,51,51,0.7)), url('https://picsum.photos/1600/900?blur=2'); background-size: cover; background-position: center; height: 100vh; display: flex; align-items: center; justify-content: center; text-align: center; color: #FFFFFF; padding-top: 4rem; }
+    .hero { background: linear-gradient(rgba(51,51,51,0.7), rgba(51,51,51,0.7)), url('https://picsum.photos/1600/900?blur=2'); background-size: cover; background-position: center; height: 100vh; display: flex; align-items: center; justify-content: center; text-align: center; color: #FFFFFF; padding-top: 4rem; box-sizing: border-box; }
+    .intro h3 { font-weight: 300; margin: 0; }
     .intro h1 { font-size: 2.5rem; margin: 0.5rem 0; }
-    .intro h4 { font-weight: 400; color: #CCCCCC; }
+    .intro h4 { font-weight: 400; color: #CCCCCC; max-width: 800px; margin: 0 auto; }
     .intro-buttons { margin-top: 2rem; display: flex; justify-content: center; gap: 20px; }
 
     /* Buttons */
-    .btn { padding: 10px 20px; border-radius: 5px; cursor: pointer; font-weight: 500; letter-spacing: 0.5px; border: none; transition: 0.3s; }
+    .btn { padding: 10px 20px; border-radius: 5px; cursor: pointer; font-weight: 500; letter-spacing: 0.5px; border: none; transition: 0.3s; text-decoration: none; }
     .common-btn { background: #333333; color: #FFFFFF; border: 2px solid #333333; }
     .common-btn:hover { background: #FFFFFF; color: #333333; }
     .ghost-btn { background: #FFFFFF; color: #333333; border: 2px solid #333333; }
     .ghost-btn:hover { background: #333333; color: #FFFFFF; }
 
     /* About */
-    .about { display: flex; align-items: center; justify-content: space-between; background: #F5F5F5; color: #333333; padding: 5rem; flex-wrap: wrap; }
-    .about div { max-width: 600px; }
-    .about img { width: 400px; border-radius: 20px; }
+    .about { display: flex; align-items: center; justify-content: space-between; background: #F5F5F5; color: #333333; padding: 5rem; flex-wrap: wrap; gap: 40px; }
+    .about div { flex: 1; min-width: 300px; max-width: 700px; }
+    .about h1 { margin-top: 0; }
+    .about img { width: 350px; height: 350px; object-fit: cover; border-radius: 20px; box-shadow: 0 5px 15px rgba(0,0,0,0.1); }
 
     /* Services */
     .services { padding: 5rem; text-align: center; }
-    .my-row { display: flex; justify-content: space-between; flex-wrap: wrap; }
-    .my-card { flex: 1; margin: 1rem; padding: 2rem; text-align: center; background: #FFFFFF; border-radius: 20px; color: #333333; border: 1px solid #CCCCCC; min-width: 250px; }
-    .icon { background: #333333; color: #FFFFFF; width: 80px; height: 80px; margin: 0 auto 1rem; display: flex; align-items: center; justify-content: center; border-radius: 50%; font-size: 30px; }
+    .my-row { display: flex; justify-content: center; flex-wrap: wrap; gap: 20px; margin-top: 2rem; }
+    .my-card { flex: 1; padding: 2rem; text-align: center; background: #FFFFFF; border-radius: 20px; color: #333333; border: 1px solid #CCCCCC; min-width: 280px; max-width: 350px; box-shadow: 0 4px 6px rgba(0,0,0,0.05); }
+    .icon { background: #333333; color: #FFFFFF; width: 70px; height: 70px; margin: 0 auto 1rem; display: flex; align-items: center; justify-content: center; border-radius: 50%; font-size: 28px; }
 
     /* Projects & Experience */
-    .projects, .experience { padding: 5rem; text-align: center; }
-    .project-card, .experience-card { background: #FFFFFF; border-radius: 15px; padding: 20px; margin: 1rem; text-align: left; box-shadow: 0 5px 15px rgba(51,51,51,0.1); flex: 1; min-width: 250px; color: #333333; }
-    .cards-row { display: flex; flex-wrap: wrap; justify-content: center; gap: 20px; }
+    .projects, .experience { padding: 5rem; text-align: center; background: #FFFFFF; }
+    .projects { background: #F5F5F5; }
+    .project-card, .experience-card { background: #FFFFFF; border-radius: 15px; padding: 25px; text-align: left; box-shadow: 0 5px 15px rgba(51,51,51,0.08); flex: 1; min-width: 300px; max-width: 500px; color: #333333; border: 1px solid #EEEEEE; }
+    .project-card h3, .experience-card h3 { margin-top: 0; color: #111111; }
+    .project-card p { font-size: 0.95rem; line-height: 1.5; }
+    .cards-row { display: flex; flex-wrap: wrap; justify-content: center; gap: 25px; margin-top: 2rem; }
+    .project-link { color: #333333; font-weight: 600; text-decoration: none; transition: 0.2s; }
+    .project-link:hover { color: #888888; text-decoration: underline; }
+
+    /* Experience Specifics */
+    .experience-card h4 { margin: 5px 0 10px 0; color: #666666; font-weight: 500; font-style: italic; }
+    .experience-card ul { padding-left: 20px; margin: 10px 0 0 0; }
+    .experience-card li { margin-bottom: 8px; font-size: 0.95rem; line-height: 1.4; list-style-type: square; }
 
     /* Skills & Certifications */
-    .skills { padding: 5rem; background: #F5F5F5; color: #333333; }
-    .skills h1 { text-align: center; color: #333333; }
-    .skills-list { display: flex; flex-wrap: wrap; justify-content: center; margin-top: 2rem; }
-    .skill-item { border: 2px solid #333333; border-radius: 10px; padding: 15px 25px; margin: 10px; background: #FFFFFF; font-weight: 500; }
-    .certifications { margin-top: 3rem; text-align: center; }
-    .certifications ul { list-style: none; padding: 0; }
-    .certifications li { margin: 8px 0; }
+    .skills { padding: 5rem; background: #FFFFFF; color: #333333; }
+    .skills h1 { text-align: center; color: #333333; margin-top: 0; }
+    .skills-list { display: flex; flex-wrap: wrap; justify-content: center; margin-top: 2rem; max-width: 1100px; margin-left: auto; margin-right: auto; }
+    .skill-item { border: 1px solid #CCCCCC; border-radius: 10px; padding: 12px 20px; margin: 8px; background: #F9F9F9; font-weight: 500; display: flex; align-items: center; gap: 10px; font-size: 0.95rem; box-shadow: 0 2px 4px rgba(0,0,0,0.02); }
+    .skill-item i { color: #333333; }
+    
+    .certifications { margin-top: 4rem; text-align: center; background: #F5F5F5; padding: 3rem; border-radius: 20px; max-width: 900px; margin-left: auto; margin-right: auto; }
+    .certifications h2 { margin-top: 0; }
+    .certifications ul { list-style: none; padding: 0; margin: 1.5rem 0 0 0; }
+    .certifications li { margin: 12px 0; font-size: 1rem; }
+    .certifications a { color: #333333; font-weight: 600; text-decoration: none; }
+    .certifications a:hover { text-decoration: underline; }
 
     /* Education */
-    .education { padding: 3rem; background: #FFFFFF; color: #333333; }
-    .education h2 { text-align: center; margin-bottom: 1rem; }
-    .education ul { list-style: none; padding: 0; text-align: center; }
-    .education li { margin: 8px 0; }
+    .education { padding: 5rem; background: #F5F5F5; color: #333333; text-align: center; }
+    .education h2 { margin-top: 0; margin-bottom: 2rem; }
+    .education-container { display: flex; flex-direction: column; align-items: center; gap: 20px; }
+    .education-card-item { background: #FFFFFF; padding: 20px; border-radius: 15px; width: 100%; max-width: 700px; text-align: left; box-shadow: 0 4px 6px rgba(0,0,0,0.04); border-left: 5px solid #333333; }
+    .education-card-item h3 { margin: 0 0 5px 0; font-size: 1.2rem; }
+    .education-card-item p { margin: 0; color: #555555; }
 
-    /* Activities & References */
-    .activities, .references { padding: 3rem; background: #FFFFFF; color: #333333; }
-    .activities h2, .references h2 { text-align: center; margin-bottom: 1rem; }
-    .activities ul, .references ul { list-style: none; padding: 0; text-align: center; }
-    .activities li, .references li { margin: 8px 0; }
+    /* Activities */
+    .activities { padding: 5rem; background: #FFFFFF; color: #333333; text-align: center; }
+    .activities h2 { margin-top: 0; margin-bottom: 2rem; }
+    .activities-list { max-width: 800px; margin: 0 auto; text-align: left; padding-left: 20px; }
+    .activities-list li { margin-bottom: 15px; line-height: 1.5; font-size: 1rem; }
 
     /* Contact */
-    .contact { padding: 5rem; }
-    .contact-content { display: flex; justify-content: space-between; flex-wrap: wrap; }
-    .contact-form { display: flex; flex-direction: column; width: 45%; }
-    .form-controls { margin: 1rem 0; padding: 10px; border: 1px solid #333333; border-radius: 5px; background: #FFFFFF; color: #333333; }
-    .contact-details { width: 45%; color: #333333; }
+    .contact { padding: 5rem; background: #F5F5F5; }
+    .contact h1 { text-align: center; margin-top: 0; }
+    .contact-content { display: flex; justify-content: space-between; flex-wrap: wrap; gap: 40px; margin-top: 2rem; max-width: 1100px; margin-left: auto; margin-right: auto; }
+    .contact-form { display: flex; flex-direction: column; width: 48%; min-width: 300px; }
+    .form-controls { margin-bottom: 1rem; padding: 12px; border: 1px solid #CCCCCC; border-radius: 5px; background: #FFFFFF; color: #333333; font-family: inherit; font-size: 0.95rem; }
+    .form-controls:focus { outline: none; border-color: #333333; }
+    .contact-details { width: 45%; min-width: 300px; color: #333333; }
+    .contact-details h3 { margin-bottom: 5px; display: flex; align-items: center; gap: 10px; font-size: 1.1rem; }
+    .contact-details p { margin-top: 0; margin-bottom: 20px; font-size: 1rem; padding-left: 28px; }
 
     /* Footer */
-    .footer { background: #333333; color: #FFFFFF; text-align: center; padding: 1rem; }
-    .footer-links { color: #FFFFFF; margin: 0 5px; font-size: 15px; transition: 0.3s; }
+    .footer { background: #333333; color: #FFFFFF; text-align: center; padding: 2rem 1rem; }
+    .footer p { margin: 0 0 15px 0; }
+    .footer-links { color: #FFFFFF; margin: 0 10px; font-size: 15px; transition: 0.3s; text-decoration: none; display: inline-block; }
     .footer-links:hover { color: #888888; }
+    .footer-links i { margin-right: 5px; }
 
-/* Remove underline for contact and footer links */
-.contact-details a,
-.footer-links {
-  text-decoration: none;
-  color: inherit; /* keeps the original color */
-  transition: 0.3s;
-}
-
-.footer-links:hover {
-  color: #888888; /* or any hover color you prefer */
-}
-
+    /* Global Link Styling Reset for details */
+    .contact-details a { text-decoration: none; color: inherit; transition: 0.3s; }
+    .contact-details a:hover { color: #888888; text-decoration: underline; }
 
     @media screen and (max-width: 768px) {
-      .menu { display: none; background: #333333; position: absolute; right: 0; top: 75px; width: 100%; }
-      .menu .menu-list { flex-direction: column; align-items: center; }
-      .hamburger { display: block; padding: 0 3rem; }
-      .about { flex-direction: column; text-align: center; }
-      .contact-content { flex-direction: column; align-items: center; }
-      .contact-form, .contact-details { width: 90%; }
+      .about { flex-direction: column; text-align: center; padding: 3rem 2rem; }
+      .about img { width: 280px; height: 280px; }
+      .services, .projects, .experience, .skills, .education, .activities, .contact { padding: 3rem 1.5rem; }
+      .contact-content { flex-direction: column; }
+      .contact-form, .contact-details { width: 100%; }
       .cards-row { flex-direction: column; align-items: center; }
+      .project-card, .experience-card { max-width: 100%; width: 100%; box-sizing: border-box; }
     }
   </style>
 </head>
@@ -207,10 +227,10 @@
     <div class="intro">
       <h3>Hello, I'm</h3>
       <h1>Md. Abdullah Ibna Harun</h1>
-      <h4>Software QA Engineer | Automation & Manual Testing Specialist</h4>
+      <h4>IT & Software Quality Assurance Professional</h4>
       <div class="intro-buttons">
-        <a href="#contact"><button class="btn common-btn">Hire Me</button></a>
-        <a href="md_abdullah_ibna_harun_software_qa.pdf" download><button class="btn ghost-btn">Download CV</button></a>
+        <a href="#contact" class="btn common-btn">Hire Me</a>
+        <a href="Resume_of_Md_Abdullah_Ibna_Harun_QA_IT_Executive.pdf" class="btn ghost-btn">Download CV</a>
       </div>
     </div>
   </section>
@@ -220,196 +240,202 @@
     <div>
       <h1>About Me</h1>
       <p>
-       Dynamic Software Quality Assurance Engineer with 2+ years of hands-on experience in Manual and Automated testing within
-Agile environments. Proven expertise in Selenium, JMeter ,BrowserStack and Postman to ensure the quality of HRM, POS, ERP,
-E-Commerce, and Sales Force applications. Proficient in maven, gradle, and STLC, having successfully automated end-to-end
-testing scenarios. Skilled in Software Quality Assurance and leadership, committed to delivering bug-free, scalable software
-solutions. Currently pursuing my M.Sc. in Software Engineering (Cybersecurity Major) from Daffodil International University.
+        Dynamic IT and Software Quality Assurance Professional with 2+ years of hands-on technical experience within Agile environments. Proficient in web automation (Selenium), database queries, and network simulations using Cisco Packet Tracer. Experienced in diagnosing software anomalies, providing infrastructure and system support for enterprise software (HRM, ERP, POS), and documenting technical requirements (SRS). Committed to maintaining system operational stability and efficiency. Currently pursuing my M.Sc. in Software Engineering (Major in Cybersecurity) from Daffodil International University.
       </p>
     </div>
     <img src="https://avatars.githubusercontent.com/u/60839928?s=400&u=e289ffbaec7de1d0c767afba186224b72066e557&v=4" alt="Profile Image" />
   </section>
 
   <!-- Services -->
-<section id="services" class="services">
-  <h1>My Services</h1>
-  <div class="my-row">
-    <div class="my-card">
-      <div class="icon"><i class="fas fa-robot"></i></div>
-      <h3>Automation Testing</h3>
-      <p>Design and maintain Selenium-based automation frameworks with Java, Maven, and JUnit.</p>
-    </div>
+  <section id="services" class="services">
+    <h1>My Services</h1>
+    <div class="my-row">
+      <div class="my-card">
+        <div class="icon"><i class="fas fa-headset"></i></div>
+        <h3>Technical Support & Infrastructure</h3>
+        <p>Expertise in software anomalies diagnostics, IT infrastructure maintenance, and remote system support.</p>
+      </div>
 
-    <div class="my-card">
-      <div class="icon"><i class="fas fa-bug"></i></div>
-      <h3>Manual Testing</h3>
-      <p>Comprehensive functional, regression, and UI testing ensuring smooth end-user experience.</p>
-    </div>
+      <div class="my-card">
+        <div class="icon"><i class="fas fa-network-wired"></i></div>
+        <h3>Networking & Simulation</h3>
+        <p>Designing, configuring, and optimizing infrastructure routing architectures (LAN, RIPv2, DHCP, DNS).</p>
+      </div>
 
-    <div class="my-card">
-      <div class="icon"><i class="fas fa-server"></i></div>
-      <h3>API & Load Testing</h3>
-      <p>Use Postman, Swagger, and JMeter for API reliability, performance, and scalability analysis.</p>
-    </div>
+      <div class="my-card">
+        <div class="icon"><i class="fas fa-robot"></i></div>
+        <h3>Automation & Manual Testing</h3>
+        <p>Writing browser automation scripts using Selenium and managing manual enterprise application testing pipelines.</p>
+      </div>
 
-    <div class="my-card">
-      <div class="icon"><i class="fas fa-file-alt"></i></div>
-      <h3>Technical Documentation</h3>
-      <p>SRS creation, Test Planning, Test Execution, Reports, Manual Documents, and all related documentation.</p>
-    </div>
+      <div class="my-card">
+        <div class="icon"><i class="fas fa-shield-alt"></i></div>
+        <h3>Cybersecurity Operations</h3>
+        <p>Web app penetration testing assessments (SQLi, XSS, CSRF, IDOR) and automated security vulnerability scanning.</p>
+      </div>
 
-    <div class="my-card">
-      <div class="icon"><i class="fas fa-headset"></i></div>
-      <h3>Technical Support</h3>
-      <p>IT support, IT consultancy, and software planning to ensure smooth operational workflows.</p>
-    </div>
+      <div class="my-card">
+        <div class="icon"><i class="fas fa-database"></i></div>
+        <h3>Database Administration</h3>
+        <p>Executing structured data schemas, optimized query handling, and transactional database integrity validation.</p>
+      </div>
 
-    <div class="my-card">
-      <div class="icon"><i class="fas fa-cubes"></i></div>
-      <h3>Object-Oriented System Design</h3>
-      <p>ERD, Activity Diagrams, UML diagrams, and overall system design for structured software architecture.</p>
+      <div class="my-card">
+        <div class="icon"><i class="fas fa-file-alt"></i></div>
+        <h3>Technical Documentation</h3>
+        <p>Authoring comprehensive Software Requirement Specifications (SRS), product mapping, and execution reports.</p>
+      </div>
     </div>
-  </div>
-</section>
-
+  </section>
 
   <!-- Projects -->
   <section id="projects" class="projects">
-    <h1>Projects</h1>
+    <h1>Key Projects</h1>
     <div class="cards-row">
       <div class="project-card">
-        <h3>Konnect Automation Testing</h3>
-        <p>Implemented test automation suite and performance tests for internal applications to ensure reliability and scalability.</p>
-        <p><strong>Technologies:</strong> Selenium, JUnit, Java, Maven</p>
-        <p><strong>Project Link:</strong> <a href="https://github.com/mdabdullahibnaharun/konnect-AutomationTesting-Selenium" target="_blank">GitHub Repository</a></p>
+        <h3>School Network System</h3>
+        <p>Designed and simulated a comprehensive institutional network architecture supporting school directories, registration, and user directory systems. Configured core network services like DHCP, RIPv2, DNS, and central email configurations.</p>
+        <p><strong>Technologies:</strong> Cisco Packet Tracer, Network Topology Engineering</p>
+        <p><strong>Project Link:</strong> <a class="project-link" href="https://github.com/mdabdullahibnaharun/School-Network-System-CN-Project" target="_blank">GitHub Repository</a></p>
+      </div>
+
+      <div class="project-card">
+        <h3>YouTube Spam Comment Detector</h3>
+        <p>Developed a full-stack Machine Learning web application using Flask microframework to classify real-time comments with 92% accuracy. Implemented NumPy/Pandas pipelines and utilized Scikit-learn for text analysis algorithms.</p>
+        <p><strong>Technologies:</strong> Python, Flask, Naive Bayes, NumPy, Pandas, Scikit-learn</p>
+        <p><strong>Project Link:</strong> <a class="project-link" href="https://github.com/mdabdullahibnaharun/Youtube-Spam-Comment-Detector-FLASK" target="_blank">GitHub Repository</a></p>
+      </div>
+
+      <div class="project-card">
+        <h3>Allopathic Products Data Scraper</h3>
+        <p>Developed an automated web scraping script leveraging Selenium for headless browser automation and data extraction. Implemented dynamic pagination handling and structured batch-processing pipelines using Pandas.</p>
+        <p><strong>Technologies:</strong> Python, Selenium, Pandas, Automated Web Scraping</p>
+        <p><strong>Project Link:</strong> <a class="project-link" href="https://github.com/mdabdullahibnaharun/DGDA-Allopathic-Products-Scraper" target="_blank">GitHub Repository</a></p>
+      </div>
+
+      <div class="project-card">
+        <h3>Cross-Platform Blog Application</h3>
+        <p>Developed a feature-rich mobile/desktop CRUD blog application using Flutter framework and Dart language integrated with GetX state management. Integrated Firebase Authentication and real-time Firestore synchronization.</p>
+        <p><strong>Technologies:</strong> Flutter, Dart, GetX, Firebase Auth, Cloud Firestore</p>
+        <p><strong>Project Link:</strong> <a class="project-link" href="https://github.com/mdabdullahibnaharun/BlogApp" target="_blank">GitHub Repository</a></p>
       </div>
     </div>
   </section>
 
   <!-- Experience -->
   <section id="experience" class="experience">
-    <h1>Experience</h1>
+    <h1>Professional Experience</h1>
     <div class="cards-row">
       <div class="experience-card">
-        <h3>Software QA Engineer</h3>
-        <p> Smart Software Ltd. | FEB 2024 – FEB 2025</p>
+        <h3>Technical Support & QA Engineer</h3>
+        <h4>Smart Software Ltd. | Feb 2024 -- Feb 2025</h4>
         <ul>
-          <li>Performed automation testing using Selenium and JUnit.</li>
-          <li>Executed manual testing and bug tracking using Trello and Bitrix24.</li>
-          <li>Collaborated with developers to resolve issues and ensure quality delivery.</li>
+          <li>Maintained and monitored system performance across 200+ functional modules of Enterprise application platforms including HRM, ERP, and POS systems.</li>
+          <li>Diagnosed technical anomalies, performed software troubleshooting, and provided user support via remote access tools (AnyDesk/TeamViewer).</li>
+          <li>Coordinated with cross-functional development teams to deploy stable updates, analyze requirements (SRS), and manage testing documentation.</li>
+          <li>Led an Agile sub-team of 4 members, managing daily task allocation and incident tracking via Bitrix24.</li>
         </ul>
       </div>
+      
       <div class="experience-card">
-      <h3> SQA Engineer Intern</h3>
-        <p> Creative Soft Technology Ltd. | SEP 2023  – DEC 2023</p>
+        <h3>SQA Intern</h3>
+        <h4>Creative Soft Technology Ltd. | Sept 2023 -- Dec 2023</h4>
         <ul>
-          <li>Developed test cases and executed manual testing for multiple projects.</li>
-          <li>Implemented basic automation scripts using Selenium and Postman.</li>
-          <li>Documented software defects and performance issues efficiently.</li>
+          <li>Assisted in setting up and testing system workflows and database integration protocols for internal projects.</li>
+          <li>Developed automated scripts and handled manual technical assessments to validate system navigation paths and database integrity.</li>
+          <li>Maintained granular system documentation, asset logs, and generated weekly technical performance status reports.</li>
         </ul>
       </div>
     </div>
   </section>
 
   <!-- Skills & Certifications -->
-<section id="skills" class="skills">
-  <h1>Technical Skills & Certifications</h1>
-  <div class="skills-list">
-    <div class="skill-item"><i class="fa-brands fa-java"></i> Java</div>
-    <div class="skill-item"><i class="fa-solid fa-code"></i> Automation Testing (Selenium)</div>
-    <div class="skill-item"><i class="fa-solid fa-gauge-high"></i> JMeter</div>
-    <div class="skill-item"><i class="fa-solid fa-vial"></i> Manual Testing</div>
-    <div class="skill-item"><i class="fa-solid fa-database"></i> MySQL, SQLite</div>
-    <div class="skill-item"><i class="fa-brands fa-git-alt"></i> Git & GitHub</div>
-    <div class="skill-item"><i class="fa-solid fa-diagram-project"></i> SDLC / STLC</div>
-    <div class="skill-item"><i class="fa-solid fa-bug-slash"></i> Bugzilla / Bitrix24 / Trello</div>
-    <div class="skill-item"><i class="fa-solid fa-paper-plane"></i> Postman</div>
-    <div class="skill-item"><i class="fa-solid fa-server"></i> Swagger API</div>
-    <div class="skill-item"><i class="fa-solid fa-file-lines"></i> Technical Documentation</div>
-    <div class="skill-item"><i class="fa-solid fa-headset"></i> Technical Support</div>
-    <div class="skill-item"><i class="fa-solid fa-cubes"></i> Object-Oriented System Design</div>
-  </div>
+  <section id="skills" class="skills">
+    <h1>Technical Skills & Certifications</h1>
+    <div class="skills-list">
+      <div class="skill-item"><i class="fa-solid fa-network-wired"></i> Networking (LAN, RIPv2, DHCP, DNS, Cisco Packet Tracer)</div>
+      <div class="skill-item"><i class="fa-solid fa-shield-halved"></i> Cyber Security (Ethical Hacking, Web App PenTesting, Acunetix)</div>
+      <div class="skill-item"><i class="fa-solid fa-laptop-code"></i> Automation & Testing (Selenium, BrowserStack, JMeter, Postman, JUnit, Shell Scripting)</div>
+      <div class="skill-item"><i class="fa-solid fa-headset"></i> Remote Technical Support (AnyDesk, TeamViewer)</div>
+      <div class="skill-item"><i class="fa-solid fa-database"></i> Databases (SQL, PostgreSQL, MySQL, DBA)</div>
+      <div class="skill-item"><i class="fa-solid fa-cubes"></i> Enterprise Software Troubleshooting (ERP, HRM, POS)</div>
+      <div class="skill-item"><i class="fa-brands fa-python"></i> Languages (Java, Python, C/C++, Dart)</div>
+      <div class="skill-item"><i class="fa-solid fa-layer-group"></i> Frameworks (Spring Boot, Microservices, Angular, Flutter, Firebase)</div>
+      <div class="skill-item"><i class="fa-solid fa-list-check"></i> Management (Agile, SDLC, STLC, SRS, JIRA, Trello, Bitrix24)</div>
+      <div class="skill-item"><i class="fa-solid fa-file-excel"></i> Operations (Advanced Excel, Visio, Access Control, CCTV)</div>
+    </div>
 
-  <div class="certifications">
-    <h2>Certifications</h2>
-    <ul>
-      <li>✅ <a href="https://tinyurl.com/mdabihsqa" target="_blank">Software Testing And Quality Assurance – Skill Jobs (Dec 2023)</a></li>
-      <li>✅ <a href="https://tinyurl.com/mdabihjavabtop" target="_blank">Java From Basic To Professional – PONDIT (Apr 2021)</a></li>
-      <li>✅ <a href="https://tinyurl.com/mdaihcybersafe" target="_blank">CyberSAFE – BdREN</a></li>
-    </ul>
-  </div>
-</section>
-
+    <div class="certifications">
+      <h2>Certifications</h2>
+      <ul>
+        <li>✅ <strong>Enterprise Java & Infrastructure Training</strong> – Dev Academy BD (Apr 2024)</li>
+        <li>✅ <a href="https://tinyurl.com/mdabihsqa" target="_blank">Software Testing, Operations and Quality Assurance – Skill Jobs (Dec 2023)</a></li>
+      </ul>
+    </div>
+  </section>
 
   <!-- Education -->
   <section id="education" class="education">
     <h2>Education</h2>
-    <ul>
-      <li>📚 M.Sc. Software Engineering (Cybersecurity Major), Daffodil International University, JUN 2025 – Present </li>
-      <li>📚 B.Sc. Computer Science & Engineering (CGPA: 3.78/4.00), Daffodil International University, Graduated FEB 2024</li>
-    </ul>
+    <div class="education-container">
+      <div class="education-card-item">
+        <h3>M.Sc. in Software Engineering (Major in Cybersecurity)</h3>
+        <p>Daffodil International University | Ongoing (Expected Jul 2026)</p>
+      </div>
+      <div class="education-card-item">
+        <h3>B.Sc. in Computer Science and Engineering</h3>
+        <p>Daffodil International University | Graduated Feb 2024 (CGPA: 3.78/4.00)</p>
+      </div>
+    </div>
   </section>
 
   <!-- Activities -->
   <section id="activities" class="activities">
     <h2>Activities</h2>
-    <ul>
-      <li>DIU Student Prefect – Assisted in software testing and project labs (Jan 2021 – Apr 2021, Dhaka, Bangladesh)</li>
-      <li>Campus Ambassador – Show The Creativity – Managed team events and social media (Nov 2020 – Jun 2021, Dhaka, Bangladesh)</li>
+    <ul class="activities-list">
+      <li><strong>Student Prefect</strong> – Daffodil International University (Jan 2021 -- Apr 2021) <br> Supported faculty in managing classes and lab coordination in Software Engineering and Software Project I & II courses.</li>
+      <li><strong>Campus Ambassador Director</strong> – Show The Creativity (Nov 2020 -- Jun 2021) <br> Organized campus events, coordinated partner communication, and represented the organization in Divisional-level campaigns.</li>
     </ul>
   </section>
 
-<!-- Contact -->
-<section id="contact" class="contact">
-  <h1>Contact Me</h1>
-  <div class="contact-content">
-    <form class="contact-form">
-      <input class="form-controls" type="text" placeholder="Your Name" required />
-      <input class="form-controls" type="email" placeholder="Your Email" required />
-      <textarea class="form-controls" rows="5" placeholder="Your Message"></textarea>
-      <button class="btn common-btn" type="submit">Send Message</button>
-    </form>
-    <div class="contact-details">
-      <h3><i class="fas fa-envelope"></i> Email:</h3>
-      <p>mdabdullahih13426@gmail.com</p>
+  <!-- Contact -->
+  <section id="contact" class="contact">
+    <h1>Contact Me</h1>
+    <div class="contact-content">
+      <form class="contact-form" onsubmit="event.preventDefault();">
+        <input class="form-controls" type="text" placeholder="Your Name" required />
+        <input class="form-controls" type="email" placeholder="Your Email" required />
+        <textarea class="form-controls" rows="5" placeholder="Your Message" required></textarea>
+        <button class="btn common-btn" type="submit">Send Message</button>
+      </form>
+      <div class="contact-details">
+        <h3><i class="fas fa-envelope"></i> Email:</h3>
+        <p><a href="mailto:mdabdullahih13426@gmail.com">mdabdullahih13426@gmail.com</a></p>
 
-      <h3><i class="fas fa-phone"></i> Phone:</h3>
-      <p>+8801786287766</p>
+        <h3><i class="fas fa-phone"></i> Phone:</h3>
+        <p><a href="tel:+8801786287766">+8801786287766</a></p>
 
-      <h3><i class="fab fa-linkedin"></i> LinkedIn:</h3>
-      <p><a href="https://linkedin.com/in/mdabdullahibnaharun" target="_blank">linkedin.com/in/mdabdullahibnaharun</a></p>
+        <h3><i class="fab fa-linkedin"></i> LinkedIn:</h3>
+        <p><a href="https://linkedin.com/in/mdabdullahibnaharun" target="_blank">linkedin.com/in/mdabdullahibnaharun</a></p>
 
-      <h3><i class="fab fa-github"></i> GitHub:</h3>
-      <p><a href="https://github.com/mdabdullahibnaharun" target="_blank">github.com/mdabdullahibnaharun</a></p>
+        <h3><i class="fab fa-github"></i> GitHub:</h3>
+        <p><a href="https://github.com/mdabdullahibnaharun" target="_blank">github.com/mdabdullahibnaharun</a></p>
 
-      <h3><i class="fas fa-map-marker-alt"></i> Location:</h3>
-      <p>20, Sukrabad, Dhaka-1207, Bangladesh</p>
+        <h3><i class="fas fa-map-marker-alt"></i> Location:</h3>
+        <p>20 Sukrabad, Dhaka-1207, Bangladesh</p>
+      </div>
     </div>
-  </div>
-</section>
+  </section>
 
-<!-- Footer -->
-<footer class="footer">
-  <p>© 2025 Md. Abdullah Ibna Harun</p>
-    <div style="margin-top: 10px;">
-    <a class="footer-links" href="https://facebook.com/mdabdullahibnaharun" target="_blank">
-      <i class="fab fa-facebook-f"></i> Facebook
-    </a>
-    <a class="footer-links" href="https://instagram.com/mdabdullahibnaharun" target="_blank">
-      <i class="fab fa-instagram"></i> Instagram
-    </a>
-    <a class="footer-links" href="https://linkedin.com/in/mdabdullahibnaharun" target="_blank">
-      <i class="fab fa-linkedin-in"></i> LinkedIn
-    </a>
-    <a class="footer-links" href="https://stackoverflow.com/users/12866426/md-abdullah-ibna-harun" target="_blank">
-      <i class="fab fa-stack-overflow"></i> Stack Overflow
-    </a>
-    <a class="footer-links" href="https://twitter.com/mdabdullahibnaharun" target="_blank">
-      <i class="fab fa-twitter"></i> Twitter
-    </a>
-  </div>
-</footer>
-
+  <!-- Footer -->
+  <footer class="footer">
+    <p>© 2026 Md. Abdullah Ibna Harun</p>
+    <div>
+      <a class="footer-links" href="https://linkedin.com/in/mdabdullahibnaharun" target="_blank"><i class="fab fa-linkedin-in"></i> LinkedIn</a>
+      <a class="footer-links" href="https://github.com/mdabdullahibnaharun" target="_blank"><i class="fab fa-github"></i> GitHub</a>
+      <a class="footer-links" href="http://mdabdullahibnaharun.github.io/" target="_blank"><i class="fas fa-globe"></i> Portfolio</a>
+    </div>
+  </footer>
 
   <script>
     const hamburger = document.getElementById('hamburger');
@@ -422,16 +448,25 @@ solutions. Currently pursuing my M.Sc. in Software Engineering (Cybersecurity Ma
         menu.style.display = "none";
         crossIcon.style.display = "none";
       } else {
-        crossIcon.style.display = "inline-block";
+        crossIcon.style.display = "none";
         hamIcon.style.display = "none";
+        crossIcon.style.display = "inline-block";
         menu.style.display = "block";
       }
+    });
+
+    // Close menu when links are clicked on responsive devices
+    const navLinks = document.querySelectorAll('.links');
+    navLinks.forEach(link => {
+      link.addEventListener('click', () => {
+        if (window.innerWidth <= 768) {
+          menu.style.display = "none";
+          document.querySelector('.cross-icon').style.display = "none";
+          document.querySelector('.hamburger-icon').style.display = "inline-block";
+        }
+      });
     });
   </script>
 
 </body>
 </html>
-
-
-
-

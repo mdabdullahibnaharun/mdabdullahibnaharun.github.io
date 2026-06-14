@@ -1,0 +1,200 @@
+\documentclass[letterpaper,10pt]{article}
+\usepackage[empty]{fullpage}
+\usepackage{titlesec}
+\usepackage{enumitem}
+\usepackage[hidelinks]{hyperref}
+\usepackage{fancyhdr}
+\usepackage{fontawesome5}
+\usepackage{multicol}
+\usepackage{bookmark}
+\usepackage{lastpage}
+\usepackage{CormorantGaramond}
+\usepackage{charter}
+\usepackage{xcolor}
+
+% Set all colors to Black
+\definecolor{accentTitle}{HTML}{000000}
+\definecolor{accentText}{HTML}{000000}
+\definecolor{accentLine}{HTML}{000000}
+
+\pagestyle{fancy}
+\fancyhf{}
+\fancyfoot{}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+\urlstyle{same}
+\addtolength{\oddsidemargin}{-0.7in}
+\addtolength{\evensidemargin}{-0.5in}
+\addtolength{\textwidth}{1.19in}
+\addtolength{\topmargin}{-0.7in}
+\addtolength{\textheight}{1.4in}
+\setlength{\multicolsep}{-3.0pt}
+\setlength{\columnsep}{-1pt}
+\setlength{\tabcolsep}{0pt}
+\setlength{\footskip}{3.7pt}
+\raggedbottom
+\raggedright
+\input{glyphtounicode}
+\pdfgentounicode=1
+
+\newcommand{\documentTitle}[2]{
+  \begin{center}
+    {\Huge\color{accentTitle} #1}
+    \vspace{6pt}
+    {\color{accentLine} \hrule}
+    \vspace{2pt}
+    {\color{accentLine} \hrule}
+    \vspace{6pt}
+    \footnotesize{#2}
+  \end{center}
+}
+
+\titleformat{\section}{
+  \vspace{-5pt}
+  \color{accentText}
+  \raggedright\large\bfseries
+}{}{0em}{}[\color{accentLine}\titlerule]
+
+\newcommand{\heading}[2]{\hspace{10pt}#1\hfill#2\\}
+\newcommand{\headingBf}[2]{\heading{\textbf{#1}}{\textbf{#2}}}
+\newcommand{\headingIt}[2]{\heading{\textit{#1}}{\textit{#2}}}
+
+\newenvironment{resume_list}{
+  \vspace{-7pt}
+  \begin{itemize}[itemsep=-2px, parsep=1pt, leftmargin=30pt]
+}{
+  \end{itemize}
+}
+\renewcommand\labelitemi{--}
+
+\begin{document}
+
+\documentTitle{Md. Abdullah Ibna Harun}{
+  \begin{tabular}{@{} p{6.1cm} @{\hfill} c @{\hfill} p{6.1cm} @{}}
+    \href{tel:+8801786287766}{\raisebox{-0.07\height} \faPhone\ +8801786287766} & 
+    \href{mailto:mdabdullahih13426@gmail.com}{\raisebox{-0.15\height} \faEnvelope\ mdabdullahih13426@gmail.com} & 
+    \hfill\href{https://linkedin.com/in/mdabdullahibnaharun}{\raisebox{-0.15\height} \faLinkedin\ linkedin.com/in/mdabdullahibnaharun} \\ [4pt]
+    \raisebox{-0.05\height} \faHome\ 20 Sukrabad, Dhaka-1207 & 
+    \href{https://github.com/mdabdullahibnaharun}{\raisebox{-0.15\height} \faGithub\ github.com/mdabdullahibnaharun} & 
+    \hfill\href{http://mdabdullahibnaharun.github.io/}{\raisebox{-0.15\height} \faGlobe\ mdabdullahibnaharun.github.io}
+  \end{tabular}
+}
+
+\section{Summary}
+Dynamic IT and Software Quality Assurance Professional with 2+ years of hands-on technical experience within Agile environments. Proficient in web automation (Selenium), database queries, and network simulations using Cisco Packet Tracer. Experienced in diagnosing software anomalies, providing infrastructure and system support for enterprise software (HRM, ERP, POS), and documenting technical requirements (SRS). Committed to maintaining system operational stability and efficiency.
+
+\section{Technical Skills}
+\begin{tabular}{@{}p{3.8cm}p{15.2cm}@{}}
+\textbf{Networking:} & LAN, WIFI, Routing (RIPv2), DHCP, DNS, Mail Server, Cisco Packet Tracer. \\
+\textbf{Cyber Security:} & Ethical Hacking, Web App PenTesting (SQLi, XSS, CSRF, IDOR, Brute Force), Acunetix. \\
+\textbf{Operating Systems:} & Kali Linux, Linux OS, Windows OS. \\
+\textbf{Automation \& Testing:} & Selenium, BrowserStack, JMeter, Postman, JUnit, Shell Scripting. \\
+\textbf{Remote Support:} & Technical Support, AnyDesk, TeamViewer, UltraViewer. \\
+\textbf{Databases:} & SQL (SQL lite, PostgreSQL, MySQL), Database Administration (DBA). \\
+\textbf{Enterprise Software:} & Operational Knowledge in ERP, HRM, POS Systems Troubleshooting. \\
+\textbf{Languages:} & Java, Python (Pandas), C/C++, Dart. \\
+\textbf{Frameworks:} & Spring Boot, Microservices, Angular, Flutter, Firebase. \\
+\textbf{Management:} & Agile, SDLC, STLC, Requirement Analysis (SRS), JIRA, Trello, Bitrix24. \\
+\textbf{Office \& Operations:} & Advanced Excel, PowerPoint, Visio, Payroll Management, CCTV, Access Control. \\
+\end{tabular}
+
+\section{Professional Experience}
+
+\headingBf{Smart Software Ltd.}{Feb 2024 -- Feb 2025}
+\headingIt{Technical Support \& QA Engineer}{Dhaka, Bangladesh}
+\begin{resume_list}
+  \item Maintained and monitored system performance across 200+ functional modules of Enterprise application platforms including HRM, ERP, and POS systems.
+  \item Diagnosed technical anomalies, performed software troubleshooting, and provided user support via remote access tools (AnyDesk/TeamViewer).
+  \item Coordinated with cross-functional development teams to deploy stable updates, analyze requirements (SRS), and manage testing documentation.
+  \item Led an Agile sub-team of 4 members, managing daily task allocation and incident tracking via Bitrix24.
+\end{resume_list}
+
+\headingBf{Creative Soft Technology Ltd.}{Sept 2023 -- Dec 2023}
+\headingIt{SQA Intern}{Dhaka, Bangladesh}
+\begin{resume_list}
+  \item Assisted in setting up and testing system workflows and database integration protocols for internal projects.
+  \item Developed automated scripts and handled manual technical assessments to validate system navigation paths and database integrity.
+  \item Maintained granular system documentation, asset logs, and generated weekly technical performance status reports.
+\end{resume_list}
+
+\section{Education}
+\headingBf{Daffodil International University}{Dhaka, Bangladesh}
+\headingIt{M.Sc. in Software Engineering (Major in Cybersecurity)}{Ongoing, Exp. Jul 2026}
+\headingIt{B.Sc. in Computer Science and Engineering (CGPA: 3.78/4.00)}{Graduated Feb 2024}
+
+\section{Key Projects}
+
+\headingBf{School Network System -- Cisco Packet Tracer}{github.com/mdabdullahibnaharun/School-Network-System-CN-Project}
+\begin{resume_list}
+  \item Designed and simulated a comprehensive institutional network architecture supporting school directories, registration, and user directory systems.
+  \item Configured network infrastructure services, including DHCP, RIPv2 routing protocol, DNS server, and central Email accounts.
+  \item Engineered collaborative topology bounds allowing concurrent user workflows and optimized data routing paths.
+\end{resume_list}
+
+\vspace{12pt}
+\vspace{12pt}
+\vspace{12pt}
+\vspace{12pt}
+\vspace{12pt}
+\vspace{12pt}
+\vspace{12pt}
+
+\headingBf{YouTube Spam Comment Detector}{github.com/mdabdullahibnaharun/Youtube-Spam-Comment-Detector-FLASK}
+\begin{resume_list}
+  \item Developed a full-stack Machine Learning web application using Flask microframework to classify real-time comments with 92\% accuracy.
+  \item Implemented data manipulation pipelines using NumPy and Pandas to preprocess, filter, and extract features from Kaggle text datasets.
+  \item Applied Naive Bayes classification algorithms using Scikit-learn for model building, text validation, and automated inference.
+\end{resume_list}
+
+\headingBf{Allopathic Products Data Scraper}{github.com/mdabdullahibnaharun/DGDA-Allopathic-Products-Scraper}
+\begin{resume_list}
+  \item Developed an automated web scraping script in Python leveraging Selenium for headless browser automation and data extraction.
+  \item Implemented dynamic pagination handling and structured batch-processing pipelines using Pandas to export dataset arrays into Excel files.
+\end{resume_list}
+
+\headingBf{Cross-Platform Blog Application}{github.com/mdabdullahibnaharun/BlogApp}
+\begin{resume_list}
+  \item Developed a feature-rich mobile/desktop CRUD blog application using Flutter framework and Dart language integrated with GetX state management.
+  \item Integrated Firebase Authentication for secure user login/registration and utilized Firestore/Firebase Storage for real-time asset data storing.
+\end{resume_list}
+
+\section{Certifications}
+\begin{resume_list}
+  \item \textbf{Enterprise Java \& Infrastructure Training} -- Dev Academy BD (Apr 2024) \\
+  Focused on Java, OOP, Spring Boot, Microservices, CI/CD, and Docker for scalable application development.
+  \item \textbf{Software Testing, Operations and Quality Assurance} -- Skill Jobs (Dec 2023) \\
+  Comprehensive program covering manual/automated testing, requirements analysis, and STLC. \href{https://tinyurl.com/mdabihsqa}{\textit{(View Credential: https://tinyurl.com/mdabihsqa)}}
+\end{resume_list}
+
+\section{Activities}
+
+\headingBf{Daffodil International University}{Jan 2021 -- Apr 2021}
+\headingIt{Student Prefect}{Dhaka, Bangladesh}
+\begin{resume_list}
+  \item Supported faculty in managing classes and lab coordination in Software Engineering and Software Project I \& II courses.
+  \item Assisted students with academic and administrative inquiries.
+\end{resume_list}
+
+\headingBf{Show The Creativity}{Nov 2020 -- Jun 2021}
+\headingIt{Campus Ambassador Director}{Dhaka, Bangladesh}
+\begin{resume_list}
+  \item Organized campus events and coordinated communication with partners.
+  \item Represented the organization in Divisional-level promotional campaigns.
+\end{resume_list}
+
+\section{Interests}
+\begin{resume_list}
+  \item Project coordination, Team collaboration, Leadership.
+  \item Complex Thinking, Problem Solving, Web Engineering, Team Work.
+\end{resume_list}
+
+\section{References}
+\begin{tabular}{@{}p{10cm}@{}}
+\textbf{Md. Rakibul Hasan Sohan} \\
+ICT Manager \\
+Shakti Foundation for Disadvantaged Women \\
+Email: mrhsohan@shakti.org.bd \\
+Cell: +8801610187834 \\
+\end{tabular}
+
+\end{document}
